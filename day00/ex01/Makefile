@@ -6,11 +6,11 @@
 #    By: tmullan <tmullan@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/13 13:36:41 by tmullan       #+#    #+#                  #
-#    Updated: 2020/11/13 17:21:39 by tmullan       ########   odam.nl          #
+#    Updated: 2020/11/15 18:41:10 by tmullan       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = yellowpages
 CXX = g++
 OBJ = megaphone.o
 FLAGS = -Wall -Wextra -Werror
