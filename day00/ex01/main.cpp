@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/15 18:55:31 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/18 18:26:09 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/18 19:13:56 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,17 @@ int		main() {
 	phonebook	contact[8];
 	int i = 0;
 
-	std::cout << "Welcome to Turlough's phonebook! You have [" << 8 - i << "] free contact space left.\nPlease type one of the following commands:" << std::endl;
-	std::cout << "ADD to add a user\nSEARCH to search the phonebook\nEXIT to quit the phonebook:\n";
-	while (i < 8)
+	std::cout << "Welcome to Turlough's phonebook!" << std::endl;
+	std::cout << "Type ADD to add a user\nSEARCH to search the phonebook\nEXIT to quit the phonebook:\n";
+	while (1)
 	{
 		if (i > 0)
-			std::cout << "ADD, SEARCH or EXIT" << std::endl;
+			std::cout << "You have [" << 8 - i << "] free contact space left.\nADD, SEARCH or EXIT" << std::endl;
+		if (i == 8)
+		{
+			std::cout << "The phonebook is full up! Adding another contact will erase the first user\n" << std::endl;
+			i = 0;
+		}
 		std::cin >> buff;
 		if (buff.compare("ADD") == 0)
 		{
@@ -42,11 +47,16 @@ int		main() {
 		else if (buff.compare("SEARCH") == 0)
 		{
 			std::cout << "These are the contacts saved in your phonebook:" << std::endl;
-			std::cout << contact[0].get_details() << std::endl;
+			int k = 0;
+			while (k <= i)
+			{
+				std::cout << contact[k].get_details() << std::endl;
+				k++;
+			}
 		}
 		else if (buff.compare("EXIT") == 0)
 		{
-			std::cout << "Aight Imma yeet" << std::endl;
+			std::cout << "Closing and deleting phonebook" << std::endl;
 			return(0);
 		}
 		else
