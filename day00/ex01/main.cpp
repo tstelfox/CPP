@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/15 18:55:31 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/18 19:13:56 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/18 20:22:29 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,50 @@
 void	add_contact(std::string buff, phonebook &contact) {
 
 	std::cout << "Please enter contact details" << std::endl;
+
 	std::cout << "First Name:";
 	std::cin >> buff;
-	contact.set_details(buff);
+	contact.set_firstname(buff);
+
+	std::cout << "Last Name:";
+	std::cin >> buff;
+	contact.set_lastname(buff);
+
+	std::cout << "Nickname:";
+	std::cin >> buff;
+	contact.set_nickname(buff);
+
+	std::cout << "Login:";
+	std::cin >> buff;
+	contact.set_login(buff);
+
+	std::cout << "Postal Address:";
+	std::cin >> buff;
+	contact.set_postaladdress(buff);
+
+	std::cout << "Email Address";
+	std::cin >> buff;
+	contact.set_emailaddress(buff);
+
+	std::cout << "Phone Number:";
+	std::cin >> buff;
+	contact.set_phonenumber(buff);
+
+	std::cout << "Birthday:";
+	std::cin >> buff;
+	contact.set_birthday(buff);
+
+	std::cout << "Favourite Meal:";
+	std::cin >> buff;
+	contact.set_favouritemeal(buff);
+
+	std::cout << "Underwear Colour:";
+	std::cin >> buff;
+	contact.set_underwear(buff);
+
+	std::cout << "Darkest Secret:";
+	std::cin >> buff;
+	contact.set_darkestsecret(buff);
 }
 
 int		main() {
@@ -40,7 +81,7 @@ int		main() {
 		std::cin >> buff;
 		if (buff.compare("ADD") == 0)
 		{
-			std::cout << "OK! Let's [" << buff << "]" << std::endl;
+			std::cout << "OK! Input contact details" << std::endl;
 			add_contact(buff, contact[i]);
 			i++;
 		}
