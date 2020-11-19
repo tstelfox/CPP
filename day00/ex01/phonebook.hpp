@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/15 18:41:26 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/18 20:00:50 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/19 10:23:51 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	set_birthday(string buff);
 void	set_favouritemeal(string buff);
 void	set_underwear(string buff);
 void	set_darkestsecret(string buff);
-string	get_details() const;
+void	get_details(int i) const;
 
 private:
 
