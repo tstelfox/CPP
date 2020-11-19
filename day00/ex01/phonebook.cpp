@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/15 16:44:58 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/19 10:24:52 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/19 10:52:58 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,19 @@ void	phonebook::set_underwear ( string buff) { this->_underwear_colour.assign(bu
 
 void	phonebook::set_darkestsecret ( string buff) { this->_darkest_secret.assign(buff); }
 
+void	phonebook::column_padding ( string content ) const {
+	std::cout << std::setw (10) << content;
+}
+
 void	phonebook::get_details ( int i ) const {
 	
-	std::cout << "Index do be : [" << i << "]" << std::endl;
-	std::cout << "First name do be: [" << this->_first_name << "]" << std::endl;
-	std::cout << "Last name do be: [" << this->_last_name << "]" << std::endl;
-	std::cout << "Nickname do be: [" << this->_nickname << "]" << std::endl;
+	std::string index = to_string(i);
+	column_padding(index);
+	std::cout << "|";
+	column_padding(this->_first_name);
+	std::cout << "|";
+	column_padding(this->_last_name);
+	std::cout << "|";
+	column_padding(this->_nickname);
+	std::cout << std::endl;
 }

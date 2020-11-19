@@ -6,13 +6,14 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/15 18:41:26 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/19 10:23:51 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/19 10:49:11 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 # include <iostream>
+# include <iomanip>
 # include <string>
 
 using namespace std;
@@ -36,6 +37,7 @@ void	set_favouritemeal(string buff);
 void	set_underwear(string buff);
 void	set_darkestsecret(string buff);
 void	get_details(int i) const;
+void	column_padding(string content) const;
 
 private:
 
