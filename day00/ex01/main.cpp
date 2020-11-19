@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/15 18:55:31 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/19 10:23:38 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/19 12:58:47 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,48 +22,47 @@ void	add_contact(std::string buff, phonebook &contact) {
 	contact.set_firstname(buff);
 
 	std::cout << "Last Name:";
-	std::cin >> buff;
+	std::getline (std::cin, buff);
 	contact.set_lastname(buff);
 
 	std::cout << "Nickname:";
-	std::cin.ignore();
 	std::getline (std::cin, buff);
 	contact.set_nickname(buff);
 
-	// std::cout << "Login:";
-	// std::cin >> buff;
-	// contact.set_login(buff);
+	std::cout << "Login:";
+	std::cin >> buff;
+	contact.set_login(buff);
 
-	// std::cout << "Postal Address:";
-	// std::cin.ignore();
-	// std::getline (std::cin, buff);
-	// contact.set_postaladdress(buff);
+	std::cout << "Postal Address:";
+	std::cin.ignore();
+	std::getline (std::cin, buff);
+	contact.set_postaladdress(buff);
 
-	// std::cout << "Email Address";
-	// std::cin >> buff;
-	// contact.set_emailaddress(buff);
+	std::cout << "Email Address";
+	std::cin >> buff;
+	contact.set_emailaddress(buff);
 
-	// std::cout << "Phone Number:";
-	// std::cin >> buff;
-	// contact.set_phonenumber(buff);
+	std::cout << "Phone Number:";
+	std::cin >> buff;
+	contact.set_phonenumber(buff);
 
-	// std::cout << "Birthday:";
-	// std::cin >> buff;
-	// contact.set_birthday(buff);
+	std::cout << "Birthday:";
+	std::cin >> buff;
+	contact.set_birthday(buff);
 
-	// std::cout << "Favourite Meal:";
-	// std::cin.ignore();
-	// std::getline (std::cin, buff);
-	// contact.set_favouritemeal(buff);
+	std::cout << "Favourite Meal:";
+	std::cin.ignore();
+	std::getline (std::cin, buff);
+	contact.set_favouritemeal(buff);
 
-	// std::cout << "Underwear Colour:";
-	// std::cin >> buff;
-	// contact.set_underwear(buff);
+	std::cout << "Underwear Colour:";
+	std::cin >> buff;
+	contact.set_underwear(buff);
 
-	// std::cout << "Darkest Secret:";
-	// std::cin.ignore();
-	// std::getline (std::cin, buff);
-	// contact.set_darkestsecret(buff);
+	std::cout << "Darkest Secret:";
+	std::cin.ignore();
+	std::getline (std::cin, buff);
+	contact.set_darkestsecret(buff);
 }
 
 int		main() {
@@ -100,6 +99,13 @@ int		main() {
 				k = i;
 			for (int c = 0; c < k; c++)
 				contact[c].get_details(c);
+			std::cout << "Index of contact for full details" << std::endl;
+			std::cin >> buff;
+			int j = std::stoi (buff);
+			if (j <= k && buff.length() < 2)
+				contact[j].full_contact();
+			else
+				std::cout << "Could not find index entered" << std::endl;
 		}
 		else if (buff.compare("EXIT") == 0)
 		{

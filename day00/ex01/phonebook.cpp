@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/15 16:44:58 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/19 10:52:58 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/19 12:38:27 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,27 @@ void	phonebook::set_underwear ( string buff) { this->_underwear_colour.assign(bu
 void	phonebook::set_darkestsecret ( string buff) { this->_darkest_secret.assign(buff); }
 
 void	phonebook::column_padding ( string content ) const {
-	std::cout << std::setw (10) << content;
+	if (content.length() > 10)
+	{
+		content.resize (9);
+		std::cout << content << ".";
+	}
+	else
+		std::cout << std::setw (10) << content;
+}
+
+void	phonebook::full_contact ( void ) const {
+	std::cout	<< _first_name << std::endl
+				<< _last_name << std::endl
+				<< _nickname << std::endl
+				<< _login << std::endl
+				<< _postal_address << std::endl
+				<< _email_address << std::endl
+				<< _phone_number << std::endl
+				<< _birthday_date << std::endl
+				<< _favourite_meal << std::endl
+				<< _underwear_colour << std::endl
+				<< _darkest_secret << std::endl;
 }
 
 void	phonebook::get_details ( int i ) const {
