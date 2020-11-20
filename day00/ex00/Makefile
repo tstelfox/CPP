@@ -6,12 +6,12 @@
 #    By: tmullan <tmullan@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/13 13:36:41 by tmullan       #+#    #+#                  #
-#    Updated: 2020/11/13 17:09:06 by tmullan       ########   odam.nl          #
+#    Updated: 2020/11/20 15:20:18 by tmullan       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = megaphone
-CXX = g++
+CXX = clang++
 OBJ = megaphone.o
 FLAGS = -Wall -Wextra -Werror
 

@@ -6,14 +6,14 @@
 #    By: tmullan <tmullan@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/13 13:36:41 by tmullan       #+#    #+#                  #
-#    Updated: 2020/11/18 16:32:19 by tmullan       ########   odam.nl          #
+#    Updated: 2020/11/20 15:47:37 by tmullan       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = yellowpages
-CXX = g++
+CXX = clang++
 OBJ = phonebook.o main.o
-# FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
