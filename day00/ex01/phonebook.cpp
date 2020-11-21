@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/15 16:44:58 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/19 12:38:27 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/21 14:02:59 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,29 +25,29 @@ phonebook::~phonebook ( void ) {
 	return;
 }
 
-void	phonebook::set_firstname ( string buff) { this->_first_name.assign(buff); }
+void	phonebook::set_firstname ( std::string buff) { this->_first_name.assign(buff); }
 
-void	phonebook::set_lastname ( string buff) { this->_last_name.assign(buff); }
+void	phonebook::set_lastname ( std::string buff) { this->_last_name.assign(buff); }
 
-void	phonebook::set_nickname ( string buff) { this->_nickname.assign(buff); }
+void	phonebook::set_nickname ( std::string buff) { this->_nickname.assign(buff); }
 
-void	phonebook::set_login ( string buff) { this->_login.assign(buff); }
+void	phonebook::set_login ( std::string buff) { this->_login.assign(buff); }
 
-void	phonebook::set_postaladdress ( string buff) { this->_postal_address.assign(buff); }
+void	phonebook::set_postaladdress ( std::string buff) { this->_postal_address.assign(buff); }
 
-void	phonebook::set_emailaddress ( string buff) { this->_email_address.assign(buff); }
+void	phonebook::set_emailaddress ( std::string buff) { this->_email_address.assign(buff); }
 
-void	phonebook::set_phonenumber ( string buff) { this->_phone_number.assign(buff); }
+void	phonebook::set_phonenumber ( std::string buff) { this->_phone_number.assign(buff); }
 
-void	phonebook::set_birthday ( string buff) { this->_birthday_date.assign(buff); }
+void	phonebook::set_birthday ( std::string buff) { this->_birthday_date.assign(buff); }
 
-void	phonebook::set_favouritemeal ( string buff) { this->_favourite_meal.assign(buff); }
+void	phonebook::set_favouritemeal ( std::string buff) { this->_favourite_meal.assign(buff); }
 
-void	phonebook::set_underwear ( string buff) { this->_underwear_colour.assign(buff); }
+void	phonebook::set_underwear ( std::string buff) { this->_underwear_colour.assign(buff); }
 
-void	phonebook::set_darkestsecret ( string buff) { this->_darkest_secret.assign(buff); }
+void	phonebook::set_darkestsecret ( std::string buff) { this->_darkest_secret.assign(buff); }
 
-void	phonebook::column_padding ( string content ) const {
+void	phonebook::column_padding ( std::string content ) const {
 	if (content.length() > 10)
 	{
 		content.resize (9);
@@ -73,7 +73,7 @@ void	phonebook::full_contact ( void ) const {
 
 void	phonebook::get_details ( int i ) const {
 	
-	std::string index = to_string(i);
+	std::string index = to_std::string(i);
 	column_padding(index);
 	std::cout << "|";
 	column_padding(this->_first_name);

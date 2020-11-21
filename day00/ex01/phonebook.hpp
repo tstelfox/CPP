@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/15 18:41:26 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/19 12:23:52 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/21 14:02:28 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 # include <iomanip>
 # include <string>
 
-using namespace std;
-
 class	phonebook {
 
 public:
@@ -25,34 +23,34 @@ public:
 		phonebook( void );
 		~phonebook( void );
 
-void	set_firstname(string buff);
-void	set_lastname(string buff);
-void	set_nickname(string buff);
-void	set_login(string buff);
-void	set_postaladdress(string buff);
-void	set_emailaddress(string buff);
-void	set_phonenumber(string buff);
-void	set_birthday(string buff);
-void	set_favouritemeal(string buff);
-void	set_underwear(string buff);
-void	set_darkestsecret(string buff);
+void	set_firstname(std::string buff);
+void	set_lastname(std::string buff);
+void	set_nickname(std::string buff);
+void	set_login(std::string buff);
+void	set_postaladdress(std::string buff);
+void	set_emailaddress(std::string buff);
+void	set_phonenumber(std::string buff);
+void	set_birthday(std::string buff);
+void	set_favouritemeal(std::string buff);
+void	set_underwear(std::string buff);
+void	set_darkestsecret(std::string buff);
 void	get_details(int i) const;
-void	column_padding(string content) const;
+void	column_padding(std::string content) const;
 void	full_contact(void) const;
 
 private:
 
-	string	_first_name;
-	string	_last_name;
-	string	_nickname;
-	string	_login;
-	string	_postal_address;
-	string	_email_address;
-	string	_phone_number;
-	string	_birthday_date;
-	string	_favourite_meal;
-	string	_underwear_colour;
-	string	_darkest_secret;
+	std::string	_first_name;
+	std::string	_last_name;
+	std::string	_nickname;
+	std::string	_login;
+	std::string	_postal_address;
+	std::string	_email_address;
+	std::string	_phone_number;
+	std::string	_birthday_date;
+	std::string	_favourite_meal;
+	std::string	_underwear_colour;
+	std::string	_darkest_secret;
 };
 
 #endif
