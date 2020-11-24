@@ -6,9 +6,11 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/24 17:16:46 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/24 17:18:28 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/24 18:08:32 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Weapon.hpp"
 
 int main() {
 {
