@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/15 16:44:58 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/21 14:02:59 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/24 13:07:18 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 phonebook::phonebook( void ) {
 
-	std::cout << "contact has been created" << std::endl;
+	std::cout << "contact slot has been created" << std::endl;
 	return;
 }
 
 phonebook::~phonebook ( void ) {
 
-	std::cout << "contact has been deleted" << std::endl;
+	std::cout << "contact slot has been deleted" << std::endl;
 	return;
 }
 
@@ -73,7 +73,7 @@ void	phonebook::full_contact ( void ) const {
 
 void	phonebook::get_details ( int i ) const {
 	
-	std::string index = to_std::string(i);
+	std::string index = std::to_string(i);
 	column_padding(index);
 	std::cout << "|";
 	column_padding(this->_first_name);

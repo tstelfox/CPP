@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/15 18:55:31 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/20 17:01:42 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/24 13:06:50 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,11 +102,11 @@ int		main() {
 			std::cout << "Index of contact for full details" << std::endl;
 			int j;
 			std::cin >> j;
-			if (cin.eof())
+			if (std::cin.eof())
 				break;
-			else if (cin.fail())
+			else if (std::cin.fail())
 			{
-				cin.clear();
+				std::cin.clear();
 				std::cout << "Could not find index entered" << std::endl;
 			}
 			else if (j < k && j < 8)
