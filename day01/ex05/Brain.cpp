@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/21 17:46:24 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/21 18:07:58 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/24 16:57:52 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@ Brain::Brain () {}
 
 Brain::~Brain () {}
 
-int*	Brain::identify () {
+const Brain*	Brain::identify () const {
 
-	int*	brainaddress = this->Brain;
-	return (brainaddress);
+	return this;
 }

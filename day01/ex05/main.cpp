@@ -6,9 +6,11 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/21 17:47:53 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/21 17:48:13 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/24 16:28:42 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Human.hpp"
 
 int main() {
 	

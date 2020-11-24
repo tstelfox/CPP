@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/21 16:45:54 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/21 17:22:23 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/24 17:09:31 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ ZombieHorde::ZombieHorde (  int N ) : _N(N) {
 ZombieHorde::~ZombieHorde ( void ) {
 
 	delete [] this->_lads;
-	std::cout << "\n\nCiao ciao amiciiiii" << std::endl;
+	std::cout << "\n\nCiao ciao - Stasera arrosticini A B R U Z Z E S I. E voi amici??" << std::endl;
 }
 
 void	ZombieHorde::announce ( void ) const {
