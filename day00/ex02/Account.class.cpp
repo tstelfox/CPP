@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/19 14:07:04 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/20 13:29:42 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/25 13:26:53 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void	Account::makeDeposit ( int deposit ) {
 	_amount += deposit;
 	_nbDeposits++;
 	_totalNbDeposits++;
-	std::cout	<< ";amount" << _amount
+	std::cout	<< ";amount:" << _amount
 				<< ";nb_deposits:" << _nbDeposits
 				<< std::endl;
 }
@@ -80,7 +80,7 @@ bool	Account::makeWithdrawal ( int withdrawal ) {
 
 	if (_amount < withdrawal)
 	{
-		std::cout << ";withdrawal: refused (ye povvo)" << std::endl;
+		std::cout << ";withdrawal:refused" << std::endl;
 		return (false);
 	}
 	else
@@ -89,7 +89,7 @@ bool	Account::makeWithdrawal ( int withdrawal ) {
 		_nbWithdrawals++;
 		_totalNbWithdrawals++;
 		std::cout	<< ";withdrawal:" << withdrawal
-					<< ";amount" << _amount
+					<< ";amount:" << _amount
 					<< ";nb_withdrawals:" << _nbWithdrawals
 					<< std::endl;
 		return (true);
