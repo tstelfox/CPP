@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/25 17:13:04 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/25 18:27:20 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/25 19:20:43 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ class	HumanB {
 
 	private:
 		std::string _name;
-		Weapon*		_equipped; // Pointer
+		Weapon*		_equipped;	// Pointer because it can be NULL and initialised later
+								// A Reference must be initialised as a reference to something.
 };
 
 

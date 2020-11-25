@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/25 17:19:24 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/25 18:26:51 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/25 19:20:25 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ void	HumanB::setWeapon ( Weapon &equip ) {
 
 void	HumanB::attack () {
 
-	std::cout << _name << " attack with his " << _equipped->getType() << std::endl;
+	std::cout << _name << " attacks with his " << _equipped->getType() << std::endl;
 }
