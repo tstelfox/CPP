@@ -6,14 +6,14 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/24 17:16:46 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/24 18:08:32 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/25 17:30:39 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int main() {
-{
 	{
 		Weapon        club = Weapon("crude spiked club");
 		

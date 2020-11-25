@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/24 17:53:46 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/24 18:04:33 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/25 11:57:54 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class	Weapon {
 					~Weapon();
 
 void				setType (std::string type);
-const std::string&	getType ();
+const std::string&	getType () const;
 	private:
 
 
