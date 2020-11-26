@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/21 16:45:54 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/24 17:09:31 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/26 17:11:36 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 
 ZombieHorde::ZombieHorde (  int N ) : _N(N) {
 	
+	if (N <= 0)
+	{
+		this->_lads = NULL;
+		std::cout << "This ain't sci-fi enough to handle a negative number of zombies" << std::endl;
+		return;
+	}
+
 	std::cout << "JESUS JOSEPH AND MARY IT'S A HORDE OF THEM\n\n" << std::endl;
 
 	Zombie* lads = new Zombie[_N];
@@ -34,8 +41,11 @@ ZombieHorde::ZombieHorde (  int N ) : _N(N) {
 
 ZombieHorde::~ZombieHorde ( void ) {
 
-	delete [] this->_lads;
-	std::cout << "\n\nCiao ciao - Stasera arrosticini A B R U Z Z E S I. E voi amici??" << std::endl;
+	if (this->_lads != NULL)
+	{
+		delete [] this->_lads;
+		std::cout << "\n\nCiao ciao - Stasera arrosticini A B R U Z Z E S I. E voi amici??" << std::endl;
+	}
 }
 
 void	ZombieHorde::announce ( void ) const {

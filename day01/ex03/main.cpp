@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/21 17:07:05 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/21 17:23:20 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/26 17:11:52 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int		main ( void ) {
 
-	ZombieHorde la_lega(9);
-
+	ZombieHorde la_lega(2);
 	return (0);
 }
