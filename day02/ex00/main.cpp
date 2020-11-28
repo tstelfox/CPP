@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Fixed.hpp                                          :+:    :+:            */
+/*   main.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/27 14:57:50 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/28 16:49:28 by tmullan       ########   odam.nl         */
+/*   Created: 2020/11/28 16:49:19 by tmullan       #+#    #+#                 */
+/*   Updated: 2020/11/28 16:50:04 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
-# include <iostream>
+#include "Fixed.hpp"
 
-class	Fixed {
+int		main( void ) {
 
-	public:
+	Fixed a;
+	Fixed b( a );
+	Fixed c;
 
-		Fixed();
-		~Fixed();
-		Fixed(const Fixed &fixed);
-		Fixed & operator = (const Fixed &fixed);
+	c = b;
 
-		int		getRawBits( void ) const;
-		void	setRawBits( int const raw );
-
-	private:
-		int	_fpoint;
-		static const int _bitwidth; // The literal 8?!? Can I even assign this way?
-};
-
-#endif
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
+	return 0;
+}
