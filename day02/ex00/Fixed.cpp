@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/27 17:56:44 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/28 16:52:47 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/28 17:48:36 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,19 @@ Fixed::~Fixed() {
 	std::cout << "Destructor called" << std::endl;
 }
 
-Fixed::Fixed ( const Fixed &fixed) {
+Fixed::Fixed ( const Fixed &original) {
 
 	std::cout << "Copy constructor called" << std::endl;
-	*this = fixed;
+	*this = original;
 
 	return;
 }
 
-Fixed&	Fixed::operator=(const Fixed &fixed) {
+Fixed&	Fixed::operator=(const Fixed &rhs) {
 
 	std::cout << "Assignation operator called" << std::endl;
-	if ( this != &fixed ) {
-		this->_fpoint = fixed.getRawBits();
+	if ( this != &rhs ) {
+		this->_fpoint = rhs.getRawBits();
 	}
 
 	return *this;
