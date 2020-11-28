@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/19 14:07:04 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/25 13:26:53 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/28 19:07:34 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ void	Account::displayStatus ( void ) const {
 
 	std::cout	<< "index:" << _accountIndex
 				<< ";amount:" << _amount
-				<< ";deposits:" << _nbDeposits
-				<< ";withdrawals:" << _nbWithdrawals
+				<< ";deposits:" << _totalNbDeposits
+				<< ";withdrawals:" << _totalNbWithdrawals
 				<< std::endl;
 }
 
