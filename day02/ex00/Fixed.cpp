@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/27 17:56:44 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/28 17:48:36 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/29 16:27:34 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,10 @@ int		Fixed::getRawBits() const {
 	std::cout << "getRawBits member function called" << std::endl;
 
 	return this->_fpoint;
-	// DO something
 }
 
 void	Fixed::setRawBits( int const raw ) {
 
 	this->_fpoint = raw;
-	// Do something else I guess
 }
 

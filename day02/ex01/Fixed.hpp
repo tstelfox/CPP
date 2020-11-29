@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/28 17:58:58 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/28 18:18:57 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/29 18:04:59 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ class	Fixed {
 
 	public:
 
+		Fixed();
 		Fixed(const int intnum);
 		Fixed(const float floatnum);
 
@@ -27,15 +28,14 @@ class	Fixed {
 		Fixed & operator = (const Fixed &rhs);
 
 
-		float	toFloat( void ) const; // Converts fixed point to float
+		float	toFloat( void ) const;
 		int		toInt( void ) const; // Converts fixed point to Int
 		int		getRawBits( void ) const;
 		void	setRawBits( int const raw );
 
 	private:
-		Fixed();
-		int	_fpoint;
-		static const int _bitwidth;
+		int		_fpoint;
+		static const int 	_bitwidth;
 };
 
 std::ostream &	operator << (std::ostream &o, Fixed const & i);
