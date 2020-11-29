@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/19 14:07:04 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/28 19:07:34 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/29 14:34:11 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int Account::_totalAmount;
 int Account::_totalNbDeposits;
 int Account::_totalNbWithdrawals;
 
-Account::Account ( int initial_deposit ) : _accountIndex(getNbAccounts()), _amount(initial_deposit) {
+Account::Account ( int initial_deposit ) : _accountIndex(getNbAccounts()), _amount(initial_deposit) , _nbDeposits(0) , _nbWithdrawals (0) {
 	
 	_nbAccounts++;
 	_totalAmount += _amount;
@@ -38,8 +38,8 @@ void	Account::displayStatus ( void ) const {
 
 	std::cout	<< "index:" << _accountIndex
 				<< ";amount:" << _amount
-				<< ";deposits:" << _totalNbDeposits
-				<< ";withdrawals:" << _totalNbWithdrawals
+				<< ";deposits:" << _nbDeposits
+				<< ";withdrawals:" << _nbWithdrawals
 				<< std::endl;
 }
 
@@ -66,6 +66,7 @@ void	Account::makeDeposit ( int deposit ) {
 				<< ";p_amount:" << _amount
 				<< ";deposit:" << deposit;
 	_amount += deposit;
+	_totalAmount += deposit;
 	_nbDeposits++;
 	_totalNbDeposits++;
 	std::cout	<< ";amount:" << _amount
@@ -86,6 +87,7 @@ bool	Account::makeWithdrawal ( int withdrawal ) {
 	else
 	{
 		_amount -= withdrawal;
+		_totalAmount -= withdrawal;
 		_nbWithdrawals++;
 		_totalNbWithdrawals++;
 		std::cout	<< ";withdrawal:" << withdrawal
