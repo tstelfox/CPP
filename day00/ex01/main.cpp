@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/15 18:55:31 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/29 14:52:22 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/29 15:20:32 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int		main() {
 		if (i > 0)
 			std::cout << "You have [" << 8 - i << "] free contact space left.\nADD, SEARCH or EXIT" << std::endl;
 		if (i == 8)
-			std::cout << "The phonebook is full up! Adding another contact will erase the current contacts from first added\n" << std::endl;
+			std::cout << "The phonebook is full up! Adding another contact will erase the current contacts from first added" << std::endl;
 		std::cin >> buff;
 		if (std::cin.eof())
 			break;
@@ -99,20 +99,28 @@ int		main() {
 			for (int c = 0; c < k; c++)
 				contact[c].get_details(c);
 			std::cout << "Index of contact for full details" << std::endl;
-			int j;
 			std::cin >> buff;
-			if (buff.length() > 1)
-				std::cout << "Could not find index entered" << std::endl;
-			j = std::stoi( buff);
 			if (std::cin.eof())
 				break;
-			else if (std::cin.fail())
+			if (buff.compare("EXIT") == 0)
+			{
+				std::cout << "Closing and deleting phonebook" << std::endl;
+				break;
+			}
+			if (buff.length() > 1 || std::cin.fail())
 			{
 				std::cin.clear();
 				std::cout << "Could not find index entered" << std::endl;
 			}
-			else if (j < k && j < 8 && j >= 0)
-				contact[j].full_contact();
+			else if (isdigit(buff[0]))
+			{
+				int j = std::stoi( buff);
+				if (j < k && j < 8 && j >= 0)
+					contact[j].full_contact();
+				else
+					std::cout << "Could not find index entered" << std::endl;
+
+			}
 			else
 				std::cout << "Could not find index entered" << std::endl;
 		}

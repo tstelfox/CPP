@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/15 16:44:58 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/11/24 13:07:18 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/11/29 15:19:17 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,17 +58,17 @@ void	phonebook::column_padding ( std::string content ) const {
 }
 
 void	phonebook::full_contact ( void ) const {
-	std::cout	<< _first_name << std::endl
-				<< _last_name << std::endl
-				<< _nickname << std::endl
-				<< _login << std::endl
-				<< _postal_address << std::endl
-				<< _email_address << std::endl
-				<< _phone_number << std::endl
-				<< _birthday_date << std::endl
-				<< _favourite_meal << std::endl
-				<< _underwear_colour << std::endl
-				<< _darkest_secret << std::endl;
+	std::cout	<< "First Name: " << _first_name << std::endl
+				<< "Last Name: " << _last_name << std::endl
+				<< "Nickname: " << _nickname << std::endl
+				<< "Login: " << _login << std::endl
+				<< "Postal Address: " << _postal_address << std::endl
+				<< "Email address: " << _email_address << std::endl
+				<< "Phone Number: " << _phone_number << std::endl
+				<< "Birthday: " << _birthday_date << std::endl
+				<< "Favourite meal: " << _favourite_meal << std::endl
+				<< "Colour of yer knickers: " << _underwear_colour << std::endl
+				<< "Darkest Secret: " << _darkest_secret << std::endl;
 }
 
 void	phonebook::get_details ( int i ) const {
