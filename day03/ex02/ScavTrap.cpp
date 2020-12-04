@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/03 17:38:17 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/04 12:07:02 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/04 17:18:54 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,13 @@
 
 ScavTrap::ScavTrap() {}
 
-ScavTrap::ScavTrap(std::string name) : _name(name) , _hp(100) , _maxHp(100) , _ep(50) ,
-			_maxEp(50) , _level (1) , _meleeDmg(20) , _rangedDmg(15) ,  _armour(3) {
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 
+	_ep = 50;
+	_maxEp = 50;
+	_meleeDmg = 20;
+	_rangedDmg = 15;
+	_armour = 3;
 	std::cout << "A ScavTrap-thing has been created" << std::endl;
 }
 
@@ -43,64 +47,6 @@ ScavTrap& ScavTrap::operator=(const ScavTrap &rhs) {
 		_armour = rhs._armour;
 
 	return *this;
-}
-
-void	ScavTrap::meleeAttack(std::string const & target) {
-
-	if (_hp == 0)
-	{
-		std::cout << _name <<  " can't do that, he ko" << std::endl;
-		return;
-	}
-	std::cout << _name << " attacks " << target << 
-	" with a blind melee skrrt, causing "<< _meleeDmg << " damage!" <<std::endl;
-}
-
-void	ScavTrap::rangedAttack(std::string const & target) {
-
-	if (_hp == 0)
-	{
-		std::cout << _name <<  " can't do that, he ko" << std::endl;
-		return;
-	}
-	std::cout << _name << " attacks " << target << 
-	" by yeeting a fidget spinner at it causing "<< _rangedDmg << " damage!" <<std::endl;
-}
-
-void	ScavTrap::beRepaired(unsigned int amount) {
-	
-	if (_hp == 0)
-	{
-		std::cout << _name << " can't be healed! He ko already" << std::endl;
-		return;
-	}
-	if (_hp + amount > _maxHp)
-	{
-		std::cout << _name << " has been healed for " << _maxHp - _hp << std::endl;
-		_hp = _maxHp;
-	}
-	else
-	{
-		_hp += amount;
-		std::cout << _name << " has been healed for " << amount << std::endl;
-	}
-}
-
-void	ScavTrap::takeDamage(unsigned int amount) {
-
-	int realdmg;
-	realdmg = amount - _armour;
-
-	if (_hp <= realdmg)
-	{
-		std::cout << _name <<  " takes " << _hp << " damage and is knocked tf out" << std::endl;
-		_hp = 0;
-	}
-	else
-	{
-		_hp -= realdmg;
-		std::cout << _name <<  " takes " << realdmg << " damage" << std::endl;
-	}
 }
 
 void	ScavTrap::challengeNewcomer(std::string const & target) {

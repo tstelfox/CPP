@@ -6,10 +6,11 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/03 17:38:33 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/04 11:53:40 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/04 16:24:24 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #include "FragTrap.hpp"
 
 class	ScavTrap {
