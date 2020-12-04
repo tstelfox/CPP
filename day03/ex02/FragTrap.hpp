@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ScavTrap.hpp                                       :+:    :+:            */
+/*   FragTrap.hpp                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/12/03 17:38:33 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/04 11:53:40 by tmullan       ########   odam.nl         */
+/*   Created: 2020/12/03 10:47:51 by tmullan       #+#    #+#                 */
+/*   Updated: 2020/12/03 17:05:05 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#pragma once
+#include <iostream>
+#include <string>
 
-class	ScavTrap {
+class   FragTrap {
 
     public:
-		ScavTrap(std::string name);
-        ScavTrap(const ScavTrap &original);
-        ~ScavTrap();
-        ScavTrap & operator = (const ScavTrap &rhs);
+		FragTrap(std::string name);
+        FragTrap(const FragTrap &original);
+        ~FragTrap();
+        FragTrap & operator = (const FragTrap &rhs);
 
 		void	rangedAttack(std::string const & target);
 		void	meleeAttack(std::string const & target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
-		void	challengeNewcomer(std::string const & target);
+		void	vaulthunter_dot_exe(std::string const & target);
 
     private:
-        ScavTrap();
+        FragTrap();
 		std::string			_name;
         int					_hp;
         unsigned int		_maxHp;
