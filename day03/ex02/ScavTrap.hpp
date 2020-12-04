@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/03 17:38:33 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/04 16:58:24 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/04 17:41:25 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ class	ScavTrap : public ClapTrap {
         ~ScavTrap();
         ScavTrap & operator = (const ScavTrap &rhs);
 
+		void	rangedAttack(std::string const & target);
+		void	meleeAttack(std::string const & target);
 		void	challengeNewcomer(std::string const & target);
 	private:
 		ScavTrap();

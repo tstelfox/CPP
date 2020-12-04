@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/03 11:14:58 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/04 17:17:20 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/04 17:41:45 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,28 @@ FragTrap& FragTrap::operator=(const FragTrap &rhs) {
 		_armour = rhs._armour;
 
 	return *this;
+}
+
+void	FragTrap::meleeAttack(std::string const & target) {
+
+	if (_hp == 0)
+	{
+		std::cout << _name <<  " can't do that, he ko" << std::endl;
+		return;
+	}
+	std::cout << _name << " attacks " << target << 
+	" with a melee attack, causing "<< _meleeDmg << " damage!" <<std::endl;
+}
+
+void	FragTrap::rangedAttack(std::string const & target) {
+
+	if (_hp == 0)
+	{
+		std::cout << _name <<  " can't do that, he ko" << std::endl;
+		return;
+	}
+	std::cout << _name << " attacks " << target << 
+	" with a ranged attack, causing "<< _rangedDmg << " damage!" <<std::endl;
 }
 
 void	FragTrap::vaulthunter_dot_exe(std::string const & target) {

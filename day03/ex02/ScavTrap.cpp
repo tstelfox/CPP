@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/03 17:38:17 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/04 17:18:54 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/04 17:42:11 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,28 @@ ScavTrap& ScavTrap::operator=(const ScavTrap &rhs) {
 		_armour = rhs._armour;
 
 	return *this;
+}
+
+void	ScavTrap::meleeAttack(std::string const & target) {
+
+	if (_hp == 0)
+	{
+		std::cout << _name <<  " can't do that, he ko" << std::endl;
+		return;
+	}
+	std::cout << _name << " attacks " << target << 
+	" with a blind melee skrrt, causing "<< _meleeDmg << " damage!" <<std::endl;
+}
+
+void	ScavTrap::rangedAttack(std::string const & target) {
+
+	if (_hp == 0)
+	{
+		std::cout << _name <<  " can't do that, he ko" << std::endl;
+		return;
+	}
+	std::cout << _name << " attacks " << target << 
+	" by yeeting a fidget spinner at it causing "<< _rangedDmg << " damage!" <<std::endl;
 }
 
 void	ScavTrap::challengeNewcomer(std::string const & target) {

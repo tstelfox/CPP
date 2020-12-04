@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/04 12:09:50 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/04 17:21:30 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/04 17:42:22 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,28 +43,6 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &rhs) {
 		_armour = rhs._armour;
 
 	return *this;
-}
-
-void	ClapTrap::meleeAttack(std::string const & target) {
-
-	if (_hp == 0)
-	{
-		std::cout << _name <<  " can't do that, he ko" << std::endl;
-		return;
-	}
-	std::cout << _name << " attacks " << target << 
-	" with a blind melee skrrt, causing "<< _meleeDmg << " damage!" <<std::endl;
-}
-
-void	ClapTrap::rangedAttack(std::string const & target) {
-
-	if (_hp == 0)
-	{
-		std::cout << _name <<  " can't do that, he ko" << std::endl;
-		return;
-	}
-	std::cout << _name << " attacks " << target << 
-	" by yeeting a fidget spinner at it causing "<< _rangedDmg << " damage!" <<std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount) {
