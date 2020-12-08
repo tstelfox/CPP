@@ -6,13 +6,11 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/04 12:10:00 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/04 18:09:15 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/08 11:14:48 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
 #include <iostream>
 #include <string>
 
