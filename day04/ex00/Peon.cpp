@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/09 16:25:42 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/09 16:36:14 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/09 17:36:18 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Peon::Peon(std::string name) : Victim(name) {
 	
-	std::cout << "ZOG ZOG" << std::endl;
+	std::cout << "ZUG ZUG" << std::endl;
 }
 
 Peon::Peon(const Peon &original) : Victim(original._name) {
@@ -32,7 +32,7 @@ Peon& Peon::operator = (const Peon &rhs) {
 
 Peon::~Peon() {
 
-	std::cout << "Bleauark..." << std::endl;
+	std::cout << "Bleuark..." << std::endl;
 }
 
 void	Peon::getPolymorphed( void ) const {

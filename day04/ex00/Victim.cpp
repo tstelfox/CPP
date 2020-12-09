@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/09 15:41:02 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/09 16:35:08 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/09 17:35:10 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,6 @@ Victim& Victim::operator = (const Victim &rhs) {
 	return *this;
 }
 
-void	Victim::introduce () {
-
-	std::cout << "I'm " << _name << " and I like boar" << std::endl;
-}
-
 void	Victim::getPolymorphed() const {
 
 	std::cout << _name << " has been turned into a cute little penguin" << std::endl;
@@ -54,7 +49,7 @@ std::string	Victim::getName( void ) const {
 
 std::ostream & operator << (std::ostream &o, Victim const &i) {
 
-	o << i.getName();
+	o << "I'm " << i.getName() << " and I like boar" << std::endl;
 
 	return (o);
 }

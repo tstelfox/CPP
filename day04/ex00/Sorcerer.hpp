@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/06 17:24:17 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/09 16:07:48 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/09 17:34:34 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ class	Sorcerer {
 		std::string	getName( void ) const;
 		std::string	getTitle( void ) const;
 		void		polymorph( Victim const & target ) const;
-		void		introduce( void );
 
 	private:
 		Sorcerer();
