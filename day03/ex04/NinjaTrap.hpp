@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
+/*   NinjaTrap.hpp                                      :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/12/04 11:23:51 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/09 11:31:05 by tmullan       ########   odam.nl         */
+/*   Created: 2020/12/04 17:55:22 by tmullan       #+#    #+#                 */
+/*   Updated: 2020/12/08 16:01:34 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #include "ClapTrap.hpp"
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
-#include "NinjaTrap.hpp"
 
-int		main( void ) {
+class	NinjaTrap : public ClapTrap {
 
-	FragTrap	Frag("The frag");
-	ScavTrap	Scav("The scav");
-	NinjaTrap	Ninja("The Ninja");
+	public:
+		NinjaTrap(std::string name);
+		NinjaTrap(const NinjaTrap &original);
+		~NinjaTrap();
+		NinjaTrap & operator = (const NinjaTrap &rhs);
 
-	std::cout << "\n" << std::endl;
+		void	meleeAttack(std::string const &target);
+		void	rangedAttack(std::string const &target);
+		void	ninjaShoebox(const FragTrap &target);
+		void	ninjaShoebox(const ScavTrap &target);
+		void	ninjaShoebox(const NinjaTrap &target);
+		
+	private:
+		NinjaTrap();
 
-	Ninja.meleeAttack("la su ma");
-	Ninja.rangedAttack("Il su babbo");
-
-	std::cout << "\n" << std::endl;
-	
-	Ninja.takeDamage(30);
-
-	Ninja.beRepaired(10);
-
-	Ninja.ninjaShoebox(Frag);
-	Ninja.ninjaShoebox(Scav);
-	Ninja.ninjaShoebox(Ninja);
-	
-}
+};
