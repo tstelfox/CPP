@@ -6,10 +6,11 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/09 11:36:07 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/09 14:27:09 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/09 16:05:10 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #include "ClapTrap.hpp"
 #include "NinjaTrap.hpp"
 

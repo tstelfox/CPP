@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/06 17:33:01 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/09 15:36:02 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/09 16:07:54 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ Sorcerer::~Sorcerer() {
 
 void	Sorcerer::introduce ( void ) {
 
-	std::cout << "I am " << _name << ", " << _title << ", and I must be an idiot" << std::endl;
+	std::cout << "I am " << _name << ", " << _title << ", and I like Tauren" << std::endl;
 }
 
 std::string	Sorcerer::getName( void ) const {
@@ -50,6 +50,11 @@ std::string	Sorcerer::getName( void ) const {
 std::string	Sorcerer::getTitle( void ) const {
 
 	return (_title);
+}
+
+void		Sorcerer::polymorph ( Victim const & target) const {
+
+	target.getPolymorphed();
 }
 
 std::ostream & operator << (std::ostream &o, Sorcerer const &i) {

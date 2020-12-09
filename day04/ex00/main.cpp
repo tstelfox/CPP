@@ -6,15 +6,23 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/09 15:34:05 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/09 15:35:05 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/09 16:34:39 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Sorcerer.hpp"
+#include "Peon.hpp"
 
-int		main( void ) {
+int main() {
 
-	Sorcerer	mage("Pprogg", "The small mage boy standing behind you");
+	Sorcerer robert("Robert", "the Magnificent");
+	Victim jim("Jimmy");
+	Peon joe("Joe");
 
-	mage.introduce();
+	std::cout << robert << jim << joe;
+	
+	robert.polymorph(jim);
+	robert.polymorph(joe);
+	
+	return 0;
 }
