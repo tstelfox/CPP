@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/06 17:24:17 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/06 17:33:25 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/09 15:35:54 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,16 @@ class	Sorcerer {
 		~Sorcerer();
 		Sorcerer& operator = (const Sorcerer &rhs);
 
+		std::string	getName( void ) const;
+		std::string	getTitle( void ) const;
+		void	introduce( void );
+
 	private:
 		Sorcerer();
 		std::string _name;
 		std::string _title;
 };
+
+std::ostream & operator << (std::ostream &o, Sorcerer const & i);
 
 #endif
