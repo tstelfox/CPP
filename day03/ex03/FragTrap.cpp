@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/03 11:14:58 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/04 17:41:45 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/09 12:36:52 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,14 @@ FragTrap::FragTrap() {}
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name) {
 
+	_hp = 100;
+	_maxHp = 100;
+	_ep = 100;
+	_maxEp = 100;
+	_level = 1;
+	_meleeDmg = 30;
+	_rangedDmg = 20;
+	_armour = 5; 
 	std::cout << "Whatever the hell a FragTrap is has been created" << std::endl;
 }
 

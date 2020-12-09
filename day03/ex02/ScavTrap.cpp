@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/03 17:38:17 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/04 17:42:11 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/09 12:46:46 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@ ScavTrap::ScavTrap() {}
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 
+	_hp = 100;
+	_maxHp = 100;
+	_level = 1;
 	_ep = 50;
 	_maxEp = 50;
 	_meleeDmg = 20;

@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/04 12:09:50 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/04 17:42:22 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/09 12:43:26 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 ClapTrap::ClapTrap() {}
 
-ClapTrap::ClapTrap(std::string name) : _name(name) , _hp(100) , _maxHp(100) , _ep(100) ,
-			_maxEp(100) , _level(1) , _meleeDmg(30) , _rangedDmg(20) ,  _armour(5)  {
+ClapTrap::ClapTrap(std::string name) : _name(name) {
 
 	std::cout << "A parent clap thing is born" << std::endl;
 }
@@ -52,7 +51,7 @@ void	ClapTrap::beRepaired(unsigned int amount) {
 		std::cout << _name << " can't be healed! He ko already" << std::endl;
 		return;
 	}
-	if (_hp + amount > _maxHp)
+	if ((_hp + amount) > _maxHp)
 	{
 		std::cout << _name << " has been healed for " << _maxHp - _hp << std::endl;
 		_hp = _maxHp;

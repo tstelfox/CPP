@@ -6,16 +6,17 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/03 10:47:51 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/08 11:12:38 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/09 13:52:07 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include "ClapTrap.hpp"
 
-class   FragTrap : public ClapTrap {
+class   FragTrap : virtual public ClapTrap {
 
     public:
+		FragTrap();
 		FragTrap(std::string name);
         FragTrap(const FragTrap &original);
         ~FragTrap();
@@ -26,5 +27,4 @@ class   FragTrap : public ClapTrap {
 		void	vaulthunter_dot_exe(std::string const & target);
 
 	private:
-		FragTrap();
 };

@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/04 11:23:51 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/09 11:31:05 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/09 12:50:40 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,15 @@ int		main( void ) {
 	std::cout << "\n" << std::endl;
 
 	Ninja.meleeAttack("la su ma");
-	Ninja.rangedAttack("Il su babbo");
+	Ninja.rangedAttack("Il su babbo");	
 
 	std::cout << "\n" << std::endl;
-	
+	Frag.takeDamage(100);
+	Scav.takeDamage(100);
+
+	Frag.beRepaired(10);
+	Scav.beRepaired(10);
+
 	Ninja.takeDamage(30);
 
 	Ninja.beRepaired(10);

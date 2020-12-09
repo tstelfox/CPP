@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/04 17:55:20 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/09 11:09:56 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/09 14:08:01 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,9 @@ NinjaTrap& NinjaTrap::operator = (const NinjaTrap &rhs) {
 	if (this != &rhs)
 		_name = rhs._name;
 		_hp = rhs._hp;
+		_maxHp = rhs._maxHp;
 		_ep = rhs._ep;
+		_maxEp = rhs._maxEp;
 		_level = rhs._level;
 		_meleeDmg = rhs._meleeDmg;
 		_rangedDmg = rhs._rangedDmg;

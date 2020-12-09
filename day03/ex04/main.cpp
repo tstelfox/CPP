@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/04 11:23:51 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/09 11:31:05 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/09 14:28:10 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,15 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 #include "NinjaTrap.hpp"
+#include "SuperTrap.hpp"
 
 int		main( void ) {
 
-	FragTrap	Frag("The frag");
-	ScavTrap	Scav("The scav");
-	NinjaTrap	Ninja("The Ninja");
-
-	std::cout << "\n" << std::endl;
-
-	Ninja.meleeAttack("la su ma");
-	Ninja.rangedAttack("Il su babbo");
-
-	std::cout << "\n" << std::endl;
+	SuperTrap Super("Sto stronzo");
+	NinjaTrap Ninja("Some guy");
 	
-	Ninja.takeDamage(30);
-
-	Ninja.beRepaired(10);
-
-	Ninja.ninjaShoebox(Frag);
-	Ninja.ninjaShoebox(Scav);
-	Ninja.ninjaShoebox(Ninja);
-	
+	Super.ninjaShoebox(Ninja);
+	Super.meleeAttack("Zuckerberg");
+	Super.rangedAttack("yer mum");
+	Super.vaulthunter_dot_exe("skrrt");
 }

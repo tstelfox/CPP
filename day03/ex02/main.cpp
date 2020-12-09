@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/04 11:23:51 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/04 17:47:25 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/09 12:50:03 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ int		main( void ) {
 		Scav.challengeNewcomer("yer mum");
 
 	std::cout << "\n" << std::endl;
-	Frag.takeDamage(106);
-	Scav.takeDamage(104);
+	Frag.takeDamage(100);
+	Scav.takeDamage(100);
 
 	Frag.beRepaired(10);
 	Scav.beRepaired(10);
