@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 11:56:38 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/10 12:06:48 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/10 12:33:33 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,7 @@
 AWeapon::AWeapon() {}
 
 AWeapon::AWeapon(std::string name, int apcost, int damage) : 
-			_name(name) , _apcost(apcost), _dmg(damage) {
-
-	
-}
+			_name(name) , _apcost(apcost), _dmg(damage) {}
 
 AWeapon::AWeapon(const AWeapon &original) {
 

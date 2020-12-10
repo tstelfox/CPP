@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 12:20:24 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/10 12:26:44 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/10 12:48:14 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int			PlasmaRifle::getDamage( void ) const {
 	return(_dmg);
 }
 
-void		PlasmaRifle::attack() {
+virtual void		PlasmaRifle::attack() const {
 
 	std::cout << "* piouuu piouuu piouuu *" << std::endl;
 }

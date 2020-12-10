@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 12:27:55 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/10 12:28:36 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/10 12:48:08 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int			PowerFist::getDamage( void ) const {
 	return(_dmg);
 }
 
-void		PowerFist::attack() {
+virtual void		PowerFist::attack() const {
 
 	std::cout << "* pschhh... SBAM *" << std::endl;
 }
