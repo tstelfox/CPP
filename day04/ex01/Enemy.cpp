@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 13:39:15 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/10 13:49:07 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/11 17:32:14 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,5 @@ int				Enemy::getHP() const {
 
 virtual void	Enemy::takeDamage( int ) {
 
-	//do something I guess.
+	//do something I guess. like take damage.
 }
