@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/04 11:23:51 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/09 14:28:10 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/17 13:25:22 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ int		main( void ) {
 	Super.ninjaShoebox(Ninja);
 	Super.meleeAttack("Zuckerberg");
 	Super.rangedAttack("yer mum");
-	Super.vaulthunter_dot_exe("skrrt");
+	Super.vaulthunter_dot_exe("this CPP day");
 }

@@ -6,12 +6,13 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/03 17:38:33 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/04 16:24:24 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/17 10:20:29 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include "FragTrap.hpp"
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
+# include "FragTrap.hpp"
 
 class	ScavTrap {
 
@@ -39,3 +40,5 @@ class	ScavTrap {
 		int					_rangedDmg;
 		int					_armour;
 };
+
+#endif

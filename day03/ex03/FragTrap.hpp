@@ -6,12 +6,13 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/03 10:47:51 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/08 11:12:38 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/17 10:18:00 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include "ClapTrap.hpp"
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
+# include "ClapTrap.hpp"
 
 class   FragTrap : public ClapTrap {
 
@@ -28,3 +29,5 @@ class   FragTrap : public ClapTrap {
 	private:
 		FragTrap();
 };
+
+#endif

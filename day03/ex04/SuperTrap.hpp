@@ -6,13 +6,14 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/09 11:36:07 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/09 16:05:10 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/17 10:14:40 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include "ClapTrap.hpp"
-#include "NinjaTrap.hpp"
+#ifndef SUPERTRAP_HPP
+# define SUPERTRAP_HPP
+# include "ClapTrap.hpp"
+# include "NinjaTrap.hpp"
 
 class SuperTrap: public FragTrap , public NinjaTrap {
 
@@ -30,3 +31,5 @@ class SuperTrap: public FragTrap , public NinjaTrap {
 		std::string _name;
 		SuperTrap();
 };
+
+#endif

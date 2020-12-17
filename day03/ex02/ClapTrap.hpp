@@ -6,15 +6,14 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/04 12:10:00 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/04 17:41:14 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/17 10:19:21 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-// #include "ScavTrap.hpp"
-// #include "FragTrap.hpp"
-#include <iostream>
-#include <string>
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
+# include <iostream>
+# include <string>
 
 class	ClapTrap {
 
@@ -39,3 +38,5 @@ class	ClapTrap {
 		int					_rangedDmg;
 		int					_armour;
 };
+
+#endif

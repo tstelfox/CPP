@@ -6,12 +6,13 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/03 17:38:33 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/04 17:41:25 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/17 10:18:43 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include "ClapTrap.hpp"
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
+# include "ClapTrap.hpp"
 
 class	ScavTrap : public ClapTrap {
 
@@ -27,3 +28,5 @@ class	ScavTrap : public ClapTrap {
 	private:
 		ScavTrap();
 };
+
+#endif

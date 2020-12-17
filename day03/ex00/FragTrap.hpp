@@ -6,13 +6,14 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/03 10:47:51 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/03 17:05:05 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/17 10:20:56 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <iostream>
-#include <string>
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
+# include <iostream>
+# include <string>
 
 class   FragTrap {
 
@@ -40,3 +41,5 @@ class   FragTrap {
 		int					_rangedDmg;
 		int					_armour;
 };
+
+#endif

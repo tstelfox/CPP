@@ -6,13 +6,14 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/04 12:10:00 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/09 11:08:13 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/17 10:17:40 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <iostream>
-#include <string>
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
+# include <iostream>
+# include <string>
 
 class	ClapTrap {
 
@@ -38,3 +39,5 @@ class	ClapTrap {
 		int					_rangedDmg;
 		int					_armour;
 };
+
+#endif
