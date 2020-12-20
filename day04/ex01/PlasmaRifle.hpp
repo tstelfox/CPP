@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 12:08:38 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/10 12:47:54 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/20 18:16:31 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PLASMARIFLE_HPP
 # include <string>
 # include <iostream>
+# include "AWeapon.hpp"
 
 class 	PlasmaRifle : public AWeapon {
 

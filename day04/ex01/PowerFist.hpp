@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 12:15:09 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/10 12:47:58 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/20 18:17:49 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define POWERFIST_HPP
 # include <string>
 # include <iostream>
+# include "AWeapon.hpp"
 
 class 	PowerFist : public AWeapon {
 

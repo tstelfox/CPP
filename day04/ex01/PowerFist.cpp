@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 12:27:55 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/10 12:48:08 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/20 18:19:39 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 PowerFist::PowerFist() : AWeapon("Power Fist", 8, 50) {}
 
-PowerFist::PowerFist(const PowerFist &original) {
+PowerFist::PowerFist(const PowerFist &original) : AWeapon( ) {
 
 	*this = original;
 }

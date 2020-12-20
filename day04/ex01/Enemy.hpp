@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 12:15:04 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/10 13:44:38 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/20 18:33:07 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,15 @@ class	Enemy {
 
         std::string     getType() const;
         int             getHP() const;
-        virtual void    takeDamage(int);
+        
+        virtual void    takeDamage(int dmg);
     
-    private:
+    protected:
         Enemy();
         int         _hp;
         std::string _type;
+
+    private:
 }
 
 

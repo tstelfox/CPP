@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 11:49:48 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/10 12:47:22 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/20 18:20:38 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,14 @@ class	AWeapon {
         int				getDamage() const;
         virtual void	attack() const = 0;
 	
-	private:
-		AWeapon();
 
 	protected:
+		AWeapon();
 		std::string	_name;
 		int			_apcost;
 		int			_dmg;
 
+	private:
 }
 
 

@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 12:20:24 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/10 12:48:14 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/20 18:20:02 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 PlasmaRifle::PlasmaRifle() : AWeapon("Plasma Rifle", 5, 21) {}
 
-PlasmaRifle::PlasmaRifle(const PlasmaRifle &original) {
+PlasmaRifle::PlasmaRifle(const PlasmaRifle &original) : AWeapon( ) {
 
 	*this = original;
 }
