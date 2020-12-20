@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 11:49:48 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/20 18:20:38 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/20 21:03:10 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class	AWeapon {
 		int			_dmg;
 
 	private:
-}
+};
 
 
 #endif

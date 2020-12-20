@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 12:20:24 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/20 18:20:02 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/20 21:10:04 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,22 +32,7 @@ PlasmaRifle&	PlasmaRifle::operator = (const PlasmaRifle &rhs) {
 
 PlasmaRifle::~PlasmaRifle() {}
 
-std::string	PlasmaRifle::getName( void ) const {
-
-	return(_name);
-}
-
-int			PlasmaRifle::getAPCost( void ) const {
-
-	return(_apcost);
-}
-
-int			PlasmaRifle::getDamage( void ) const {
-
-	return(_dmg);
-}
-
-virtual void		PlasmaRifle::attack() const {
+void		PlasmaRifle::attack() const {
 
 	std::cout << "* piouuu piouuu piouuu *" << std::endl;
 }

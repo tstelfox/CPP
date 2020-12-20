@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 12:15:00 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/20 19:06:44 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/20 20:57:04 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ class	Character {
 		void	equip(AWeapon* weapon);
 		void	attack(Enemy* target);
 		
+		AWeapon*	getWeapon() const;
+		int			getAP() const;
 		std::string getName() const;
 
 	private:
@@ -38,6 +40,7 @@ class	Character {
 		AWeapon*	_equipped;
 };
 
+std::ostream & operator << (std::ostream &o, Character const & i);
 
 
 #endif

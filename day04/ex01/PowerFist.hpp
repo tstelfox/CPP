@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 12:15:09 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/20 18:17:49 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/20 21:03:25 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class 	PowerFist : public AWeapon {
 		virtual void	attack() const;
 	private:
 
-}
+};
 
 
 #endif

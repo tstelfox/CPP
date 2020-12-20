@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   RadScorpion.hpp                                    :+:    :+:            */
+/*   Squad.hpp                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/12/10 12:15:12 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/20 21:04:45 by tmullan       ########   odam.nl         */
+/*   Created: 2020/12/20 21:20:20 by tmullan       #+#    #+#                 */
+/*   Updated: 2020/12/20 21:39:31 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SQUAD_HPP
+# define SQUAD_HPP
+# include "ISquad.hpp"
 
-#ifndef RADSCORPION_HPP
-# define RADSCORPION_HPP
-# include <string>
-# include <iostream>
-# include "Enemy.hpp"
-
-class RadScorpion : public Enemy {
-
+class Squad : public ISquad { //Have to do all this in coplien and really should rewatch the shitty intra video
+	
 	public:
-		RadScorpion();
-		RadScorpion(const RadScorpion &original);
-		RadScorpion& operator=(const RadScorpion &rhs);
-		virtual ~RadScorpion();
-		
+		Squad();
+		Squad(const Squad &original);
+		Squad& operator = (const Squad &rhs);
+		virtual ~Squad(); //I'm guessing virtual then
 
+		
 	private:
+		/* data */
 };
 
+Squad::Squad(/* args */)
+{
+}
 
+Squad::~Squad()
+{
+}
 
 #endif

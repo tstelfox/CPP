@@ -1,34 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   RadScorpion.hpp                                    :+:    :+:            */
+/*   AssaultTerminator.hpp                              :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/12/10 12:15:12 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/20 21:04:45 by tmullan       ########   odam.nl         */
+/*   Created: 2020/12/20 21:19:54 by tmullan       #+#    #+#                 */
+/*   Updated: 2020/12/20 21:20:39 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef RADSCORPION_HPP
-# define RADSCORPION_HPP
-# include <string>
-# include <iostream>
-# include "Enemy.hpp"
-
-class RadScorpion : public Enemy {
-
-	public:
-		RadScorpion();
-		RadScorpion(const RadScorpion &original);
-		RadScorpion& operator=(const RadScorpion &rhs);
-		virtual ~RadScorpion();
-		
-
-	private:
-};
-
-
+#ifndef ASSAULTTERMINATOR_HPP
+# define ASSAULTTERMINATOR_HPP
 
 #endif

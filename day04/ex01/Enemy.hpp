@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 12:15:04 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/20 18:33:07 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/20 21:07:50 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class	Enemy {
 		Enemy(int hp, std::string const & type);
         Enemy(const Enemy &original);
 		Enemy&	operator = (const Enemy &original);
-        ~Enemy();
+        virtual ~Enemy();
 
         std::string     getType() const;
         int             getHP() const;
@@ -34,7 +34,7 @@ class	Enemy {
         std::string _type;
 
     private:
-}
+};
 
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 12:08:38 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/20 18:16:31 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/20 21:03:21 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class 	PlasmaRifle : public AWeapon {
 		virtual void	attack() const;
 	private:
 
-}
+};
 
 
 

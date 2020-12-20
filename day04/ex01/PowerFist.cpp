@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 12:27:55 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/20 18:19:39 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/20 21:10:24 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,22 +32,7 @@ PowerFist&	PowerFist::operator = (const PowerFist &rhs) {
 
 PowerFist::~PowerFist() {}
 
-std::string	PowerFist::getName( void ) const {
-
-	return(_name);
-}
-
-int			PowerFist::getAPCost( void ) const {
-
-	return(_apcost);
-}
-
-int			PowerFist::getDamage( void ) const {
-
-	return(_dmg);
-}
-
-virtual void		PowerFist::attack() const {
+void		PowerFist::attack() const {
 
 	std::cout << "* pschhh... SBAM *" << std::endl;
 }
