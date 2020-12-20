@@ -6,11 +6,13 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/20 18:45:38 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/20 18:47:11 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/20 18:56:08 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RadScorpion.hpp"
+
+RadScorpion::RadScorpion() {}
 
 RadScorpion::RadScorpion() : Enemy(80, "RadScorpion") {
 

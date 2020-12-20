@@ -6,11 +6,13 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/20 18:39:32 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/20 18:46:08 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/20 18:56:24 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "SuperMutant.hpp"
+
+SuperMutant::SuperMutant() {}
 
 SuperMutant::SuperMutant() : Enemy(170, "Super Mutant") {
 
