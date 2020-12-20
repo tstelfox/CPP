@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/20 18:55:18 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/20 18:59:47 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/20 19:34:55 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,17 @@ void	Character::recoverAP() {
 		_AP = 40;
 	else
 		_AP += 10;
+}
+
+void	Character::equip(AWeapon* weapon) {
+
+	_equipped = &weapon;
+}
+
+void	Character::attack(Enemy* target) {
+
+	if (_equipped == NULL)
+		return;
+	std::cout << _name << " attacks " << target->getType() << " with a " << _equipped->getName() << std::endl;
+	
 }

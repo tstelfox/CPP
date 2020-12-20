@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/10 12:15:00 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/20 18:58:30 by tmullan       ########   odam.nl         */
+/*   Updated: 2020/12/20 19:06:44 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ class	Character {
 		~Character();
 
 		void	recoverAP();
-		void	equip(AWeapon*);
-		void	attack(Enemy*);
+		void	equip(AWeapon* weapon);
+		void	attack(Enemy* target);
 		
 		std::string getName() const;
 
