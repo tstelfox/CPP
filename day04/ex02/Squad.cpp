@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/20 21:37:23 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/04 16:40:45 by codemuncher   ########   odam.nl         */
+/*   Updated: 2021/01/04 16:45:10 by codemuncher   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,12 @@ Squad&	Squad::operator = (const Squad &rhs) {
 	return *this;
 }
 
-Squad::~Squad() {}
+Squad::~Squad() {
+
+	for (int i = 0; i < _units; i++) {
+		delete _dasquaw[i];
+	}
+}
 
 int		Squad::getCount() const {
 
