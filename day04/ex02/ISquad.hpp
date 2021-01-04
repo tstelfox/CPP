@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/20 21:20:14 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/20 21:29:16 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/04 12:36:20 by codemuncher   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@
 class ISquad {
 
 	public:
+		ISquad() {}
 		virtual ~ISquad() {}
 		virtual int getCount() const = 0;
-		virtual ISpaceMarine* getUnit(int) const = 0;
+		virtual ISpaceMarine* getUnit(int N) const = 0;
 		virtual int push(ISpaceMarine*) = 0;
 };
 
