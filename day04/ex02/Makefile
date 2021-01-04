@@ -6,14 +6,13 @@
 #    By: tmullan <tmullan@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/12/06 17:22:55 by tmullan       #+#    #+#                  #
-#    Updated: 2020/12/20 21:02:51 by tmullan       ########   odam.nl          #
+#    Updated: 2021/01/04 16:08:51 by codemuncher   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = pprogg
 CXX = clang++
-OBJ = main.o AWeapon.o Enemy.o Character.o PlasmaRifle.o PowerFist.o \
-		RadScorpion.o SuperMutant.o
+OBJ = main.o AssaultTerminator.o Squad.o TacticalMarine.o
 FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
