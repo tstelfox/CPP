@@ -6,7 +6,7 @@
 /*   By: codemuncher <codemuncher@student.codam.      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/05 11:06:29 by codemuncher   #+#    #+#                 */
-/*   Updated: 2021/01/05 13:02:50 by codemuncher   ########   odam.nl         */
+/*   Updated: 2021/01/05 16:17:52 by codemuncher   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,11 @@ class AMateria {
 		virtual void use(ICharacter &target);
 
 	private:
-		AMateria();
+		unsigned int	_xp;
+		
+	protected:
 		std::string		_type;
-		unsigned int	_xp;	
+		AMateria();
 };
 
 #endif

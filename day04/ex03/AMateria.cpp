@@ -6,7 +6,7 @@
 /*   By: codemuncher <codemuncher@student.codam.      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/05 11:45:33 by codemuncher   #+#    #+#                 */
-/*   Updated: 2021/01/05 13:02:36 by codemuncher   ########   odam.nl         */
+/*   Updated: 2021/01/05 16:09:40 by codemuncher   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,5 @@ unsigned int	AMateria::getXP() const {
 
 void			AMateria::use(ICharacter &target) {
 
-	std::cout << "I believe only the derived classes use this" << std::endl;
+	_xp += 10; //Will probs just call this function from ice and cure
 }
