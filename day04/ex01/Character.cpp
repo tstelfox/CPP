@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/20 18:55:18 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/20 21:13:34 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/05 12:32:58 by codemuncher   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ Character&	Character::operator=(const Character &rhs) {
 	if (this != &rhs) {
 		_AP = rhs._AP;
 		_name = rhs._name;
+		_equipped = rhs._equipped;
 	}
 
 	return *this;

@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/20 21:37:23 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/04 16:45:10 by codemuncher   ########   odam.nl         */
+/*   Updated: 2021/01/05 12:50:11 by codemuncher   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ Squad::Squad(const Squad &original) {
 	}
 	for (int i = 0; i < original._units; i++)
 	{
-		this->_dasquaw[i] = original._dasquaw[i]->clone(); // review
-		this->_dasquaw[i] = original.getUnit(i);
+		this->_dasquaw[i] = original._dasquaw[i]->clone();
 	}
 	this->_units = original._units;
 }
