@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "ISpaceMarine.hpp"
 #include "Squad.hpp"
 #include "TacticalMarine.hpp"
 #include "AssaultTerminator.hpp"
@@ -33,6 +32,7 @@
 // }
 
 int main(void) {
+
     ISpaceMarine    *bob = new TacticalMarine;
     ISpaceMarine    *jim = new AssaultTerminator;
     ISquad          *vlc = new Squad;
