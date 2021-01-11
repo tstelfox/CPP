@@ -30,8 +30,6 @@ AssaultTerminator::AssaultTerminator(const AssaultTerminator &original) {
 AssaultTerminator& AssaultTerminator::operator = (const AssaultTerminator &rhs) {
 
 	(void)rhs;
-	// if (this != &rhs)
-	// 	*this = rhs;
 	return *this;
 }
 

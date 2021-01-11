@@ -13,7 +13,7 @@
 NAME = pprogg
 CXX = clang++
 OBJ = main.o AssaultTerminator.o Squad.o TacticalMarine.o
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror #-fsanitize=address -g -fno-omit-frame-pointer
 
 all: $(NAME)
 

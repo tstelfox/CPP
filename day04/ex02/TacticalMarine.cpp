@@ -30,8 +30,6 @@ TacticalMarine::TacticalMarine(const TacticalMarine &original) {
 TacticalMarine& TacticalMarine::operator = (const TacticalMarine &rhs) {
 
 	(void)rhs;
-	// if (this != &rhs)
-	// 	*this = rhs;
 	return *this;
 }
 
