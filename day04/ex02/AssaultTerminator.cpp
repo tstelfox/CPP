@@ -6,7 +6,7 @@
 /*   By: codemuncher <codemuncher@student.codam.      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/04 15:43:43 by codemuncher   #+#    #+#                 */
-/*   Updated: 2021/01/04 16:34:56 by codemuncher   ########   odam.nl         */
+/*   Updated: 2021/01/11 13:18:41 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,9 @@ AssaultTerminator::AssaultTerminator(const AssaultTerminator &original) {
 
 AssaultTerminator& AssaultTerminator::operator = (const AssaultTerminator &rhs) {
 
-	if (this != &rhs)
-		*this = rhs;
+	(void)rhs;
+	// if (this != &rhs)
+	// 	*this = rhs;
 	return *this;
 }
 

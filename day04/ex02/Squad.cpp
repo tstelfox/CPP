@@ -6,14 +6,13 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/20 21:37:23 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/05 12:50:11 by codemuncher   ########   odam.nl         */
+/*   Updated: 2021/01/11 13:37:10 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Squad.hpp"
 
-Squad::Squad() : _units(0) {
-}
+Squad::Squad() : _units(0) , _dasquaw(NULL) {}
 
 Squad::Squad(const Squad &original) {
 
@@ -41,9 +40,10 @@ Squad&	Squad::operator = (const Squad &rhs) {
 
 Squad::~Squad() {
 
-	for (int i = 0; i < _units; i++) {
-		delete _dasquaw[i];
-	}
+	if (this->_dasquaw)
+		for (int i = 0; i < _units; i++) {
+			delete _dasquaw[i];
+		}
 }
 
 int		Squad::getCount() const {

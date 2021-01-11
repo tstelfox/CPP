@@ -6,7 +6,7 @@
 /*   By: codemuncher <codemuncher@student.codam.      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/04 15:31:55 by codemuncher   #+#    #+#                 */
-/*   Updated: 2021/01/05 16:23:14 by codemuncher   ########   odam.nl         */
+/*   Updated: 2021/01/11 13:18:56 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,9 @@ TacticalMarine::TacticalMarine(const TacticalMarine &original) {
 
 TacticalMarine& TacticalMarine::operator = (const TacticalMarine &rhs) {
 
-	if (this != &rhs)
-		*this = rhs;
+	(void)rhs;
+	// if (this != &rhs)
+	// 	*this = rhs;
 	return *this;
 }
 

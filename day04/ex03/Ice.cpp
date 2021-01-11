@@ -6,7 +6,7 @@
 /*   By: codemuncher <codemuncher@student.codam.      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/05 16:10:02 by codemuncher   #+#    #+#                 */
-/*   Updated: 2021/01/05 16:23:36 by codemuncher   ########   odam.nl         */
+/*   Updated: 2021/01/11 10:34:04 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ AMateria*	Ice::clone() const {
 
 void		Ice::use(Icharacter &target) {
 
-	
+	std::cout << "* shoot an ice bolt at " << target->getName() << std::endl;
+	AMateria::use(target);
 }
