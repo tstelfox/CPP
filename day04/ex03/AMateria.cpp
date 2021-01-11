@@ -42,6 +42,7 @@ unsigned int	AMateria::getXP() const {
 }
 
 void			AMateria::use(ICharacter &target) {
-
+	
+	(void)target;
 	_xp += 10; //Will probs just call this function from ice and cure
 }

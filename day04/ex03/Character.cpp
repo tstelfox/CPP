@@ -73,5 +73,9 @@ void		Character::unequip(int idx) {
 
 void		Character::use(int idx, ICharacter& target) {
 
-	
+	if (idx > 3 || _inventory[idx] == NULL) {
+		std::cout << target.getName() << " doesn't have that in inventory" << std::endl;
+		return;
+	}
+	this->_inventory[idx]->use(target);
 }
