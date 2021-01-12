@@ -39,17 +39,20 @@ void			MateriaSource::learnMateria(AMateria* learning) {
 			break;
 		i++;
 	}
-	if (learning == NULL || i == 4)
+	if (learning == NULL || i == 4) {
 		return;
+	}
 	_reserves[i] = learning;
+	// std::cout << _reserves[i]->getType() << std::endl;
 }
 
 AMateria*		MateriaSource::createMateria(std::string const & type) {
 
 	for (int i = 0; _reserves[i] != NULL; i++) {
 
-		if (type.compare(_reserves[i]->getType()) == 0)
+		if (type.compare(_reserves[i]->getType()) == 0) {
 			return _reserves[i]->clone();
+		}
 	}
 	return 0;
 }

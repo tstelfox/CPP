@@ -54,9 +54,8 @@ void		Character::equip(AMateria* m) {
 
 	int i = 0;
 	while (i < 4) {
-		if (_inventory[i] == NULL) {
+		if (_inventory[i] == NULL)
 			break;
-		}
 		i++;
 	}
 	if (m == NULL || i == 4)
@@ -72,6 +71,7 @@ void		Character::unequip(int idx) {
 }
 
 void		Character::use(int idx, ICharacter& target) {
+
 
 	if (idx > 3 || _inventory[idx] == NULL) {
 		std::cout << target.getName() << " doesn't have that in inventory" << std::endl;

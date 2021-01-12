@@ -12,7 +12,7 @@
 
 #include "Cure.hpp"
 
-Cure::Cure() : AMateria("Cure") , _xp(0) {}
+Cure::Cure() : AMateria("cure") , _xp(0) {}
 
 Cure::Cure(const Cure &original) {
 
