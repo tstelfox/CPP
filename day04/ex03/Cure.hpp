@@ -13,22 +13,21 @@
 #ifndef CURE_HPP
 # define CURE_HPP
 # include <string>
-# include "ICharacter.hpp"
 # include "AMateria.hpp"
 
 class Cure : public AMateria {
 
 	public:
-		Cure(std::string const &type);
+		Cure();
 		Cure(const Cure &original);
 		Cure& operator = (const Cure &rhs);
-		~Cure();
+		virtual ~Cure();
 
 		virtual AMateria* clone() const;
-		virtual void use(ICharacter& target);
+		void use(ICharacter& target);
 
 	private:
-		Cure();
+	int		_xp;
 };
 
 #endif

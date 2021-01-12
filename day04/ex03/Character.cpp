@@ -45,7 +45,7 @@ Character::~Character() {
 		delete this->_inventory[i];
 }
 
-std::string	const & Character::getName() {
+std::string	const & Character::getName() const {
 
 	return _name;
 }

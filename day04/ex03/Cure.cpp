@@ -12,7 +12,7 @@
 
 #include "Cure.hpp"
 
-Cure::Cure() : AMateria("Cure") {}
+Cure::Cure() : AMateria("Cure") , _xp(0) {}
 
 Cure::Cure(const Cure &original) {
 
@@ -38,5 +38,5 @@ AMateria*	Cure::clone() const {
 void		Cure::use(ICharacter &target) {
 
 	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
-	AMateria::use(target);
+	_xp += 10;
 }

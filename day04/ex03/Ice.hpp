@@ -13,8 +13,8 @@
 #ifndef ICE_HPP
 # define ICE_HPP
 # include <string>
-# include "ICharacter.hpp"
 # include "AMateria.hpp"
+# include "ICharacter.hpp"
 
 class Ice : public AMateria {
 
@@ -22,12 +22,13 @@ class Ice : public AMateria {
 		Ice();
 		Ice(const Ice &original);
 		Ice& operator = (const Ice &rhs);
-		~Ice();
+		virtual ~Ice();
 
 		virtual AMateria* clone() const;
-		virtual void use(ICharacter& target);
+		void use(ICharacter& target);
 
 	private:
+		int		_xp;
 };
 
 #endif

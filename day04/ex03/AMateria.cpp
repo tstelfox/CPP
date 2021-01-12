@@ -14,7 +14,7 @@
 
 AMateria::AMateria() {}
 
-AMateria::AMateria(std::string const & type) {}
+AMateria::AMateria(std::string const & type) : _type(type) {}
 
 AMateria::AMateria(const AMateria &original) {
 
@@ -44,5 +44,5 @@ unsigned int	AMateria::getXP() const {
 void			AMateria::use(ICharacter &target) {
 	
 	(void)target;
-	_xp += 10; //Will probs just call this function from ice and cure
+	_xp += 10;
 }

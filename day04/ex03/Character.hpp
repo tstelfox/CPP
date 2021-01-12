@@ -13,17 +13,16 @@
 #ifndef CHARACTER_HPP
 # define CHARACTER_HPP
 # include "ICharacter.hpp"
-# include "AMateria.hpp"
 
-class	Character : ICharacter {
+class	Character : public ICharacter {
 
 	public:
 		Character(std::string const &name);
 		Character(const Character &original);
 		Character&	operator = (const Character &rhs);
-		virtual ~Character() {}
+		virtual ~Character();
 		
-		virtual std::string const & getName();
+		virtual std::string const & getName() const;
 		virtual void	equip(AMateria* m);
 		virtual void	unequip(int idx);
 		virtual void	use(int idx, ICharacter& target);

@@ -13,11 +13,12 @@
 #ifndef MATERIASOURCE_HPP
 # define MATERIASOURCE_HPP
 # include "IMateriaSource.hpp"
+# include "AMateria.hpp"
 
 class MateriaSource : public IMateriaSource {
 
 	public:
-		MateriaSource(AMateria *source);
+		MateriaSource();
 		MateriaSource(const MateriaSource &original);
 		MateriaSource&	operator = (const MateriaSource &original);
 		virtual ~MateriaSource();
@@ -26,7 +27,6 @@ class MateriaSource : public IMateriaSource {
 		virtual AMateria*	createMateria(std::string const & type);
 	
 	private:
-		MateriaSource();
 		AMateria*	_reserves[4];	
 };
 
