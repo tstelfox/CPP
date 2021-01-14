@@ -60,7 +60,7 @@ void		Character::equip(AMateria* m) {
 	}
 	if (m == NULL || i == 4)
 		return;
-	_inventory[i] = m->clone();
+	_inventory[i] = m; //Cloning it was causing chaos
 }
 
 void		Character::unequip(int idx) {
@@ -78,4 +78,11 @@ void		Character::use(int idx, ICharacter& target) {
 		return;
 	}
 	this->_inventory[idx]->use(target);
+}
+
+AMateria*	Character::getMateria(int idx) {
+
+	if (idx >= 4)
+		return NULL;
+	return _inventory[idx];
 }
