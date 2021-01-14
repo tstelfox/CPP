@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/09 15:34:05 by tmullan       #+#    #+#                 */
-/*   Updated: 2020/12/09 16:34:39 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/14 11:21:00 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,11 @@ int main() {
 	
 	robert.polymorph(jim);
 	robert.polymorph(joe);
+
+	Victim juan("Juanito");
+	Peon pablo("Pablito");
+	robert.polymorph(juan);
+	robert.polymorph(pablo);
 	
 	return 0;
 }

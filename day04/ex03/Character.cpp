@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/11 11:18:26 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/11 12:55:04 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/14 11:17:14 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void		Character::use(int idx, ICharacter& target) {
 
 
 	if (idx > 3 || _inventory[idx] == NULL) {
-		std::cout << target.getName() << " doesn't have that in inventory" << std::endl;
+		std::cout << this->getName() << " doesn't have that in inventory" << std::endl;
 		return;
 	}
 	this->_inventory[idx]->use(target);
