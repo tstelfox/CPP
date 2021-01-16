@@ -66,6 +66,10 @@ ISpaceMarine*	Squad::getUnit(int N) const {
 
 int		Squad::push(ISpaceMarine* recruit) {
 
+	for (int i = 0; i < 9; i++) {
+		if (_dasquaw[i] == recruit)
+			return _units;
+	}
 	if (recruit != NULL && _units < 9) {
 		_dasquaw[_units] = recruit;
 		_units++;
