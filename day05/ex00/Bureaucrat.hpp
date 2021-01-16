@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/14 14:30:34 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/16 11:40:06 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/16 11:58:15 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define BUREAUCRAT_HPP
 # include <string>
 # include <iostream>
+// # include <exception>
 
 class Bureaucrat {
 

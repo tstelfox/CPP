@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/14 14:30:30 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/16 11:40:43 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/16 12:00:51 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name) {
 			throw low;
 		else if (grade < 1)
 			throw high;
-		else
-			_grade = grade;
+		_grade = grade;
 	}
 	catch(std::exception &e) {
 		std::cout << e.what() << std::endl;
