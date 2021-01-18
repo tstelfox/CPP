@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/14 14:30:34 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/16 11:58:15 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/18 16:13:40 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ class Bureaucrat {
 
 		std::string const	getName() const;
 		int					getGrade() const;
+		void				promotion();
+		void				demotion();
 
 		class	GradeTooHighException : public std::exception {
 			public:
