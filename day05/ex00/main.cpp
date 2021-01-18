@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/16 11:19:16 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/18 16:28:19 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/18 16:30:00 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		main() {
 	coglione.demotion();
 	for (int i = 0; coglione.getGrade() != 1; i++) {
 		coglione.promotion();
+		std::cout << coglione;
 	}
-	std::cout << coglione;
 	coglione.promotion();
 }
