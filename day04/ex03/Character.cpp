@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/11 11:18:26 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/14 11:17:14 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/18 17:05:41 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,11 @@ void		Character::equip(AMateria* m) {
 			break;
 		i++;
 	}
-	if (m == NULL || i == 4)
+	if (m == NULL || i == 4) {
+		std::cout << "inventory is full, cannot equip " << m->getType() << std::endl;
 		return;
+	}
+	std::cout << this->getName() << " equips " << m->getType() << " in slot " << i << std::endl;
 	_inventory[i] = m; //Cloning it was causing chaos
 }
 
@@ -67,6 +70,7 @@ void		Character::unequip(int idx) {
 
 	if (idx > 3)
 		return;
+	std::cout << _inventory[idx]->getType() << " at slot " << idx << " has been unequipped" << std::endl;
 	_inventory[idx] = NULL;
 }
 
@@ -77,6 +81,7 @@ void		Character::use(int idx, ICharacter& target) {
 		std::cout << this->getName() << " doesn't have that in inventory" << std::endl;
 		return;
 	}
+	std::cout << "using slot " << idx << " ";
 	this->_inventory[idx]->use(target);
 }
 

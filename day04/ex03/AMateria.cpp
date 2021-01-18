@@ -6,7 +6,7 @@
 /*   By: codemuncher <codemuncher@student.codam.      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/05 11:45:33 by codemuncher   #+#    #+#                 */
-/*   Updated: 2021/01/05 16:09:40 by codemuncher   ########   odam.nl         */
+/*   Updated: 2021/01/18 17:02:24 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,5 @@ void			AMateria::use(ICharacter &target) {
 	
 	(void)target;
 	this->_xp += 10;
+	std::cout << "xp is now " << _xp << std::endl;
 }
