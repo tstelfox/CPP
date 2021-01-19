@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/14 14:30:34 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/18 16:13:40 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/19 12:37:48 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 # define BUREAUCRAT_HPP
 # include <string>
 # include <iostream>
+# include "Form.hpp"
 // # include <exception>
+
+class Form;
 
 class Bureaucrat {
 
@@ -29,6 +32,8 @@ class Bureaucrat {
 		int					getGrade() const;
 		void				promotion();
 		void				demotion();
+		void				trycatch(int grade);
+		void				signForm(Form &form) const;
 
 		class	GradeTooHighException : public std::exception {
 			public:

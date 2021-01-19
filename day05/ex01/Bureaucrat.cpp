@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/14 14:30:30 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/18 16:26:24 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/19 12:24:07 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,10 @@ Bureaucrat::Bureaucrat() {}
 
 Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name) {
 
-	try {
-		
-		if (grade > 150)
-			throw low;
-		else if (grade < 1)
-			throw high;
-		_grade = grade;
-	}
-	catch(std::exception &e) {
-		std::cout << e.what() << std::endl;
-	}	
+	trycatch(grade);
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &original) {
+Bureaucrat::Bureaucrat(const Bureaucrat &original) : _name(original.getName()) {
 
 	*this = original;
 }
@@ -38,7 +28,7 @@ Bureaucrat&	Bureaucrat::operator = (const Bureaucrat &rhs) {
 
 	if (this != &rhs) {
 		// this->_name = rhs._name;
-		this->_grade = rhs._grade;
+		trycatch(rhs._grade);
 	}
 	return *this;
 }
@@ -86,6 +76,33 @@ void				Bureaucrat::demotion() {
 	}
 	catch(std::exception &e) {
 		std::cout << e.what() << std::endl;
+	}
+}
+
+void				Bureaucrat::trycatch(int grade) {
+
+	try {
+		if (grade > 150)
+			throw low;
+		else if (grade < 1)
+			throw high;
+		_grade = grade;
+	}
+	catch(std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}	
+}
+
+void				Bureaucrat::signForm(Form &form) const {
+
+	try {
+		form.beSigned(*this);
+		std::cout << "<" << getName() << "> signs <" 
+			<< form.getName() << ">" << std::endl;
+	}
+	catch(std::exception &e) {
+		std::cout << "<" << getName() << "> cannot sign <" 
+			<< form.getName() << "> because " << e.what() << std::endl;
 	}
 }
 
