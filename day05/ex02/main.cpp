@@ -26,12 +26,9 @@ int		main() {
 	// direttore.signForm(modulo);
 
 	direttore.executeForm(modulo);
-
 	direttore.signForm(modulo);
-
 	direttore.executeForm(modulo);
-
-	direttore.signForm(modulo);
+	coglione.executeForm(modulo);
 
 
 

@@ -108,11 +108,11 @@ void				Bureaucrat::signForm(Form &form) const {
 
 void				Bureaucrat::executeForm(Form &form) const {
 
-	form.execute(*this);
 	try {
 		form.executable(*this);
 		std::cout << "<" << getName() << "> executes <" 
 			<< form.getName() << ">" << std::endl;
+		form.execute(*this);
 	}
 	catch(std::exception &e) {
 		std::cout << "<" << getName() << "> cannot execute <" 
