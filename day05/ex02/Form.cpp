@@ -14,7 +14,7 @@
 
 Form::Form() : _signGrade(0) , _execGrade(0) {}
 
-Form::Form(std::string name, int signgrade, int execgrade) : _signed(false) ,
+Form::Form(std::string const &name, int signgrade, int execgrade) : _signed(false) ,
 		_name(name) , _signGrade(signgrade) , _execGrade(execgrade) {
 	
 	trycatch(signgrade, execgrade);
@@ -58,7 +58,7 @@ int					Form::getExecGrade() const {
 	return _execGrade;
 }
 
-void				Form::beSigned(Bureaucrat signee) {
+void				Form::beSigned(const Bureaucrat &signee) {
 
 	if (signee.getGrade() > _signGrade) {
 		throw low;
@@ -68,7 +68,18 @@ void				Form::beSigned(Bureaucrat signee) {
 	}
 	else
 		throw already;
-	
+}
+
+void				Form::executable(const Bureaucrat &executor) {
+
+	if (executor.getGrade() > _execGrade) {
+		throw low;
+	}
+	else if (_signed == false) {
+		throw notyet;
+	}
+	// else
+	// 	execute(executor);
 }
 
 const char* Form::GradeTooHighException::what() const throw() {
@@ -84,6 +95,11 @@ const char* Form::GradeTooLowException::what() const throw() {
 const char* Form::AlreadySignedException::what() const throw() {
 
 	return "the form has already been signed";
+}
+
+const char* Form::NotYetSignedException::what() const throw() {
+
+	return "the form must be signed first";
 }
 
 void				Form::trycatch(int signgrade, int execgrade) {
@@ -109,4 +125,6 @@ std::ostream&		operator << (std::ostream &o, const Form &rhs) {
 		o << "<" << rhs.getName() << "> form requires grade <" << rhs.getSignGrade() << "> to be signed off and grade <"
 		<< rhs.getExecGrade() << "> to be executed. It has not yet been signed." << std::endl;
 	}
+	return o;
 }
+
