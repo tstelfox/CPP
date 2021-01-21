@@ -12,7 +12,8 @@
 
 NAME = INPS
 CXX = clang++
-OBJ = main.o Bureaucrat.o Form.o PresidentialPardonForm.o RobotomyRequestForm.o
+OBJ = main.o Bureaucrat.o Form.o PresidentialPardonForm.o RobotomyRequestForm.o \
+		ShrubberyCreationForm.o
 FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
@@ -28,5 +29,6 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+	rm -f *_shrubbery
 
 re: fclean all
