@@ -1,0 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   Intern.hpp                                         :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/01/21 15:56:37 by tmullan       #+#    #+#                 */
+/*   Updated: 2021/01/21 15:56:37 by tmullan       ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef INTERN_HPP
+# define INTERN_HPP
+# include <string>
+# include "Form.hpp"
+
+class	Intern {
+
+	public:
+		Intern();
+		Intern(const Intern &original);
+		Intern&	operator = (const Intern &rhs);
+		~Intern();
+
+		Form*		makeForm(std::string const &form, std::string const &target);
+
+		class	FormNonExistent : public std::exception {
+			public:
+				virtual const char* what() const throw();
+		} nonexistent;
+};
+
+#endif

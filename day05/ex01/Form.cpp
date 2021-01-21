@@ -101,7 +101,7 @@ void				Form::trycatch(int signgrade, int execgrade) {
 
 std::ostream&		operator << (std::ostream &o, const Form &rhs) {
 
-	if (rhs.getSignGrade() == true) {
+	if (rhs.getSignature() == true) {
 	o << "<" << rhs.getName() << "> form requires grade <" << rhs.getSignGrade() << "> to be signed off and grade <"
 		<< rhs.getExecGrade() << "> to be executed. It has been signed." << std::endl;
 	}
