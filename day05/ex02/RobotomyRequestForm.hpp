@@ -12,6 +12,24 @@
 
 #ifndef ROBOTOMYREQUESTFORM_HPP
 # define ROBOTOMYREQUESTFORM_HPP
+# include "Form.hpp"
 
+# include "Form.hpp"
+
+
+class RobotomyRequestForm : public Form {
+
+	public:
+		RobotomyRequestForm(std::string const &target);
+		RobotomyRequestForm(const RobotomyRequestForm &original);
+		RobotomyRequestForm&	operator = (const RobotomyRequestForm &rhs);
+		~RobotomyRequestForm();
+
+		void	execute(Bureaucrat const & executor);	
+
+	private:
+		RobotomyRequestForm();
+		std::string		_target;
+};
 
 #endif

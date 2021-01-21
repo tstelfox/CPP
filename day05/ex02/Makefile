@@ -12,7 +12,7 @@
 
 NAME = INPS
 CXX = clang++
-OBJ = main.o Bureaucrat.o Form.o PresidentialPardonForm.o
+OBJ = main.o Bureaucrat.o Form.o PresidentialPardonForm.o RobotomyRequestForm.o
 FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)

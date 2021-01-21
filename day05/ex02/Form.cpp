@@ -78,8 +78,6 @@ void				Form::executable(const Bureaucrat &executor) {
 	else if (_signed == false) {
 		throw notyet;
 	}
-	// else
-	// 	execute(executor);
 }
 
 const char* Form::GradeTooHighException::what() const throw() {

@@ -12,24 +12,32 @@
 
 #include "Bureaucrat.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 int		main() {
 
 	Bureaucrat	coglione("Fantozzi", 150);
 	PresidentialPardonForm		modulo("yer mum");
 
-	coglione.signForm(modulo);
 
 	Bureaucrat	direttore("Direttore generalissimo", 1);
 
-	// direttore.signForm(modulo);
-	// direttore.signForm(modulo);
+	std::cout << direttore << coglione;
 
+	std::cout << "\n----The lowly Fantozzi tries to sign the presidential pardon----" << std::endl;
+	coglione.signForm(modulo);
+
+	std::cout << "\n----The direttore generalissimo takes it from Fantozzi and tries to work with it----" << std::endl;
 	direttore.executeForm(modulo);
 	direttore.signForm(modulo);
 	direttore.executeForm(modulo);
-	coglione.executeForm(modulo);
 
+
+	RobotomyRequestForm			bollettino("il quadribuodiulo di tu ma");
+	std::cout << "\n-----There is a form requiring four robotic procedures----" << std::endl;
+	direttore.signForm(bollettino);
+	for (int i = 0; i < 4; i++)
+		direttore.executeForm(bollettino);
 
 
 }
