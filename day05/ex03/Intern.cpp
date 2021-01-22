@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/21 16:06:07 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/21 16:06:07 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/22 16:00:48 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,9 @@ Form*		Intern::makeForm(std::string const &form, std::string const &target) {
 			if (kinds[i].compare(CAPS) == 0)
 				return ()
 		}
+	}
+	catch (std::exception &e) {
+		
 	}
 }
 
