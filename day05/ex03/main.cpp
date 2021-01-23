@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/16 11:19:16 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/23 16:17:19 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/23 16:50:30 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,8 @@ int		main() {
 
 	Intern	Defo;
 	Form* herb = Defo.makeForm("Shrubbery Creation", "herb");
-	Defo.makeForm("no form", "nothing");
+	Form* noform = Defo.makeForm("no form", "nothing");
+	coglione.signForm(*noform); // This shit will sefault
 	std::cout << *herb;
 	coglione.signForm(*herb);
 	coglione.executeForm(*herb);
