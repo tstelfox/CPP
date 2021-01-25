@@ -44,17 +44,19 @@ Form*		robo(std::string const &target) {
 
 typedef Form* (*creator)(std::string const &target);
 
+// static const char * CAPS;
+
 Form*		Intern::makeForm(std::string const &form, std::string const &target) {
 
 	try {
 		std::string	kinds[3] = { "ROBOTOMY REQUEST" , 
 								"PRESIDENTIAL PARDON" , "SHRUBBERY CREATION"};
 		creator porcamadonna[3] = { robo, pardon, shrub };
-		char CAPS[form.length()];
+		std::string mumyer = form;
 		for (size_t i = 0; i < form.length(); i++)
-			CAPS[i] = toupper(form[i]);
+			mumyer[i] = toupper(form[i]);
 		for (int i = 0; i < 3; i++) {
-			if (kinds[i].compare(CAPS) == 0) {
+			if (kinds[i].compare(mumyer) == 0) {
 				std::cout << "Intern creates <" << form << ">" << std::endl;
 				return porcamadonna[i](target);
 			}

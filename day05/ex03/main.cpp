@@ -55,6 +55,7 @@ int		main() {
 
 	Intern	Defo;
 	Form* herb = Defo.makeForm("Shrubbery Creation", "herb");
+	Defo.makeForm("Robotomy request", "please");
 	Defo.makeForm("no form", "nothing");
 	std::cout << *herb;
 	coglione.signForm(*herb);
