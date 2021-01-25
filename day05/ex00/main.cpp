@@ -14,16 +14,16 @@
 
 int		main() {
 
-	Bureaucrat	coglione("Fantozzi", 151);
+	Bureaucrat	coglione("Fantozzi", 150);
 	Bureaucrat	mumyer(coglione);
 
 	std::cout << coglione;
 	std::cout << mumyer;
 
 	coglione.demotion();
-	// for (int i = 0; coglione.getGrade() != 1; i++) {
-	// 	coglione.promotion();
-	// 	std::cout << coglione;
-	// }
-	// coglione.promotion();
+	for (int i = 0; coglione.getGrade() != 1; i++) {
+		coglione.promotion();
+		std::cout << coglione;
+	}
+	coglione.promotion();
 }

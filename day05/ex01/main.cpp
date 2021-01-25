@@ -17,6 +17,8 @@ int		main() {
 	Bureaucrat	coglione("Fantozzi", 150);
 	Form		modulo("Questo modulo semplicissimo qui", 50, 50);
 
+	std::cout << modulo;
+
 	coglione.signForm(modulo);
 
 	Bureaucrat	direttore("Direttore generalissimo", 1);

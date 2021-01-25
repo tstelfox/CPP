@@ -109,4 +109,5 @@ std::ostream&		operator << (std::ostream &o, const Form &rhs) {
 		o << "<" << rhs.getName() << "> form requires grade <" << rhs.getSignGrade() << "> to be signed off and grade <"
 		<< rhs.getExecGrade() << "> to be executed. It has not yet been signed." << std::endl;
 	}
+	return o;
 }
