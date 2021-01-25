@@ -30,10 +30,11 @@ ShrubberyCreationForm&		ShrubberyCreationForm::operator = (const ShrubberyCreati
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {}
 
-void	ShrubberyCreationForm::execute(Bureaucrat const &executor) {
+void	ShrubberyCreationForm::execute(Bureaucrat const &executor) const {
 
 	(void)executor;
-	std::ofstream	shrub(_target.append("_shrubbery"));
+	std::string targetname = _target;
+	std::ofstream	shrub(targetname.append("_shrubbery"));
 	shrub << "	         		  .                         " << std::endl;
 	shrub << "                    M                         "  << std::endl;
 	shrub << "                   dM                         "  << std::endl;

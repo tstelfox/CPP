@@ -28,10 +28,6 @@ class	Intern {
 
 		Form*		makeForm(std::string const &form, std::string const &target);
 
-		// Form*		shrub(std::string const &target);
-		// Form*		pardon(std::string const &target);
-		// Form*		robo(std::string const &target);
-
 		class	FormNonExistent : public std::exception {
 			public:
 				virtual const char* what() const throw();

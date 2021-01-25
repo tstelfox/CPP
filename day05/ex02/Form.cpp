@@ -70,7 +70,7 @@ void				Form::beSigned(const Bureaucrat &signee) {
 		throw already;
 }
 
-void				Form::executable(const Bureaucrat &executor) {
+void				Form::executable(const Bureaucrat &executor) const {
 
 	if (executor.getGrade() > _execGrade) {
 		throw low;
