@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/14 14:30:30 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/23 16:05:59 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/19 12:24:07 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ void				Bureaucrat::signForm(Form &form) const {
 	}
 }
 
-void				Bureaucrat::executeForm(Form &form) const {
+void				Bureaucrat::executeForm(Form const &form) const {
 
 	try {
 		form.executable(*this);

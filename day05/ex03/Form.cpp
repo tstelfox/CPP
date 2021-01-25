@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/19 11:00:49 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/23 16:14:42 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/19 12:38:23 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void				Form::beSigned(const Bureaucrat &signee) {
 		throw already;
 }
 
-void				Form::executable(const Bureaucrat &executor) {
+void				Form::executable(const Bureaucrat &executor) const {
 
 	if (executor.getGrade() > _execGrade) {
 		throw low;

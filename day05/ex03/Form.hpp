@@ -31,10 +31,10 @@ class Form {
 		int					getSignGrade() const;
 		int					getExecGrade() const;
 		void				beSigned(const Bureaucrat &signee);
-		void				executable(const Bureaucrat &executor);
+		void				executable(const Bureaucrat &executor) const;
 		void				trycatch(int signgrade, int execgrade);
 
-		virtual void		execute(Bureaucrat const &executor) = 0;
+		virtual void		execute(Bureaucrat const &executor) const = 0;
 
 		class	GradeTooHighException : public std::exception {
 			public:

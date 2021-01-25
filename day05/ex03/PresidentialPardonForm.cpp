@@ -30,7 +30,7 @@ PresidentialPardonForm&		PresidentialPardonForm::operator = (const PresidentialP
 
 PresidentialPardonForm::~PresidentialPardonForm() {}
 
-void	PresidentialPardonForm::execute(Bureaucrat const &executor) {
+void	PresidentialPardonForm::execute(Bureaucrat const &executor) const {
 
 	(void)executor;
 	std::cout << _target << " has been pardoned by Trump on his last day lol" << std::endl;

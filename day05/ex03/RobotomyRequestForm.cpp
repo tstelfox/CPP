@@ -30,7 +30,7 @@ RobotomyRequestForm&		RobotomyRequestForm::operator = (const RobotomyRequestForm
 
 RobotomyRequestForm::~RobotomyRequestForm() {}
 
-void	RobotomyRequestForm::execute(Bureaucrat const &executor) {
+void	RobotomyRequestForm::execute(Bureaucrat const &executor) const {
 
 	(void)executor;
 	if (rand() % 2 == 0)
