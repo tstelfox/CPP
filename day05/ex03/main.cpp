@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/16 11:19:16 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/19 12:25:54 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/23 17:37:06 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "Intern.hpp"
 
 int		main() {
 
@@ -49,6 +50,16 @@ int		main() {
 	coglione.executeForm(form_420);
 
 	std::cout << form_420;
+
+	std::cout << "\n-----The Intern wants to make forms now----" << std::endl;
+
+	Intern	Defo;
+	Form* herb = Defo.makeForm("Shrubbery Creation", "herb");
+	Defo.makeForm("no form", "nothing");
+	std::cout << *herb;
+	coglione.signForm(*herb);
+	coglione.executeForm(*herb);
+
 
 	return 0;
 }
