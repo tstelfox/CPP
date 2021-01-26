@@ -27,8 +27,8 @@ class Scalar {
 		//All the functions to print the various outputs
 		void	char_process(int literal);
 		void	int_process(int literal);
-		void	float_process(int literal);
-		void	double_process(int literal);
+		void	float_process(float skrrt);
+		// void	double_process(int literal);
 
 	private:
 		Scalar();

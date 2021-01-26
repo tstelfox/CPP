@@ -36,18 +36,33 @@ Scalar::~Scalar() {}
 
 void	Scalar::convert() {
 
-	int literal = std::stoi(_input);
-	char_process(literal);
-	int_process(literal);
-	float_process(literal);
-	double_process(literal);
+	int literal;
+	float	skrrt;
+	try {
+		literal = std::stoi(_input);
+		char_process(literal);
+		int_process(literal);
+		skrrt = std::stof(_input);
+	}
+	catch (std::invalid_argument &ha) {
+		std::cout << "char: impossible" << std::endl;
+		std::cout << "int: impossible" << std::endl;
+	}
+	float_process(skrrt);
+	// double_process(literal);
 }
 
 void	Scalar::char_process(int literal) {
 
-	if (isprint(static_cast<char>(literal) == 0)) {
+	if (isalnum((literal) == 0)) {
 		std::cout << "char: Non displayable" << std::endl;
 		return;
 	}
-	std::cout << "char : " << static_cast<char>(literal) << std::endl;
+	std::cout << "char: '" << static_cast<char>(literal) << "'" << std::endl;
 }
+
+void	Scalar::int_process(int literal) {
+
+	std::cout << "int: " << literal << std::endl;
+}
+
