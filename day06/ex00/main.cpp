@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   need_this.hpp                                      :+:    :+:            */
+/*   main.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/01/23 17:07:03 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/23 17:09:24 by tmullan       ########   odam.nl         */
+/*   Created: 2021/01/26 09:59:59 by tmullan       #+#    #+#                 */
+/*   Updated: 2021/01/26 09:59:59 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef NEED_THIS_HPP
-# define NEED_THIS_HPP
+int		main(int argc, char* argv[]) {
 
-#endif
+	
+
+	return 0;
+}
