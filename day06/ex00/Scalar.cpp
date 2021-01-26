@@ -36,8 +36,12 @@ Scalar::~Scalar() {}
 
 void	Scalar::parse() {
 
+	double	diteral;
+	std::stringstream dupalle;
+	dupalle << _input;
+	dupalle >> diteral;
+	std::cout << diteral << std::endl; // Ok this shit could be fun.
 	
-	float fuckin_hell;
 	// int literal;
 	// double	skrrt;
 	// // float	skrrf;
@@ -55,12 +59,12 @@ void	Scalar::parse() {
 	// // double_process(literal);
 }
 
-void	Scalar::char_process(int literal) {
+// void	Scalar::char_process(int literal) {
 
 
-}
+// }
 
-void	Scalar::int_process(int literal) {
+// void	Scalar::int_process(int literal) {
 
-}
+// }
 

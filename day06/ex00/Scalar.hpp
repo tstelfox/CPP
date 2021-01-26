@@ -14,6 +14,7 @@
 # define SCALAR_HPP
 # include <string>
 # include <iostream>
+# include <sstream>
 
 class Scalar {
 
