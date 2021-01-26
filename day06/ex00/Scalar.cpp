@@ -37,26 +37,25 @@ Scalar::~Scalar() {}
 void	Scalar::parse() {
 
 	double	diteral;
+	char	citeral;
+	int		literal;
+	float	fiteral;
 	std::stringstream dupalle;
 	dupalle << _input;
+	dupalle >> fiteral;
+	std::cout << "float status is: " << fiteral << std::endl; // Ok this shit could be fun.
+	std::cout << "What's in the string stream yo " << dupalle.str() << std::endl;
 	dupalle >> diteral;
-	std::cout << diteral << std::endl; // Ok this shit could be fun.
-	
-	// int literal;
-	// double	skrrt;
-	// // float	skrrf;
-	// try {
-	// 	literal = std::stoi(_input);
-	// 	char_process(literal);
-	// 	int_process(literal);
-	// 	skrrt = std::stod(_input);
-	// }
-	// catch (std::invalid_argument &ha) {
-	// 	std::cout << "char: impossible" << std::endl;
-	// 	std::cout << "int: impossible" << std::endl;
-	// }
-	// float_process(skrrt);
-	// // double_process(literal);
+	std::cout << "double status is: " << diteral << std::endl;
+	// dupalle << _input;
+	dupalle >> literal;
+	std::cout << "int status is: " << literal << std::endl;
+	std::cout << "What's in the string stream yo " << dupalle.str() << std::endl;
+	// dupalle << _input;
+	// dupalle << _input;
+	dupalle >> citeral;
+	std::cout << "char status is: " << citeral << std::endl;
+	// Or generally not cause I still have to figure out which fucking type it is madonna puttana maiala bastarda
 }
 
 // void	Scalar::char_process(int literal) {
