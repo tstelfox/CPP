@@ -26,9 +26,9 @@ class Scalar {
 
 		void	parse();
 		//All the functions to print the various outputs
-		void	char_process(int literal);
-		void	int_process(int literal);
-		void	float_process(float skrrt);
+		void	char_process();
+		void	int_process();
+		void	float_process();
 		// void	double_process(int literal);
 
 	private:
