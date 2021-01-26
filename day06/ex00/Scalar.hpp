@@ -23,7 +23,7 @@ class Scalar {
 		Scalar&	operator = (const Scalar &rhs);
 		~Scalar();
 
-		void	convert();
+		void	parse();
 		//All the functions to print the various outputs
 		void	char_process(int literal);
 		void	int_process(int literal);

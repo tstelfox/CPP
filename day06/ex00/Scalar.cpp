@@ -16,7 +16,7 @@ Scalar::Scalar() {}
 
 Scalar::Scalar(std::string const &input) : _input(input){
 
-	convert();
+	parse();
 }
 
 Scalar::Scalar(const Scalar &original) {
@@ -34,35 +34,33 @@ Scalar&	Scalar::operator = (const Scalar &rhs) {
 
 Scalar::~Scalar() {}
 
-void	Scalar::convert() {
+void	Scalar::parse() {
 
-	int literal;
-	float	skrrt;
-	try {
-		literal = std::stoi(_input);
-		char_process(literal);
-		int_process(literal);
-		skrrt = std::stof(_input);
-	}
-	catch (std::invalid_argument &ha) {
-		std::cout << "char: impossible" << std::endl;
-		std::cout << "int: impossible" << std::endl;
-	}
-	float_process(skrrt);
-	// double_process(literal);
+	
+	float fuckin_hell;
+	// int literal;
+	// double	skrrt;
+	// // float	skrrf;
+	// try {
+	// 	literal = std::stoi(_input);
+	// 	char_process(literal);
+	// 	int_process(literal);
+	// 	skrrt = std::stod(_input);
+	// }
+	// catch (std::invalid_argument &ha) {
+	// 	std::cout << "char: impossible" << std::endl;
+	// 	std::cout << "int: impossible" << std::endl;
+	// }
+	// float_process(skrrt);
+	// // double_process(literal);
 }
 
 void	Scalar::char_process(int literal) {
 
-	if (isalnum((literal) == 0)) {
-		std::cout << "char: Non displayable" << std::endl;
-		return;
-	}
-	std::cout << "char: '" << static_cast<char>(literal) << "'" << std::endl;
+
 }
 
 void	Scalar::int_process(int literal) {
 
-	std::cout << "int: " << literal << std::endl;
 }
 
