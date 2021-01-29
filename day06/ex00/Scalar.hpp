@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/23 17:07:03 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/29 14:39:56 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/29 15:32:02 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <string>
 # include <iostream>
 # include <sstream>
+# include <iomanip>
 
 class Scalar {
 

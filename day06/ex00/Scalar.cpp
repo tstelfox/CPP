@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/26 09:58:28 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/29 15:14:52 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/29 15:52:22 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,13 @@ void	Scalar::fromChar(std::stringstream const &ss) {
 	
 	char	charliteral;
 	charliteral = ss.str()[0];
+	std::cout << std::fixed << std::setprecision(1);
 	if (isprint(charliteral))
 		std::cout << "char: " << charliteral << std::endl;
 	else
 		std::cout << "char: Non displayable" << std::endl;
 	std::cout << "int: " << static_cast<int>(charliteral) << std::endl;
-	std::cout << "float: " << static_cast<float>(charliteral) << std::endl;
+	std::cout << "float: " << static_cast<float>(charliteral) << "f" << std::endl;
 	std::cout << "double: " << static_cast<double>(charliteral) << std::endl;
 }
 
