@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/26 09:58:28 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/29 12:57:32 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/29 14:55:31 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,7 @@ Scalar&	Scalar::operator = (const Scalar &rhs) {
 
 Scalar::~Scalar() {}
 
-
-typedef void (*from)(std::stringstream const &ss);
-
+typedef void (Scalar::*func_array)(std::stringstream const &ss);
 
 void	Scalar::fromChar(std::stringstream const &ss) {
 	
@@ -69,13 +67,14 @@ void	Scalar::fromBadinput(std::stringstream const &ss) {
 }
 
 void	Scalar::convert(int type) {
-	
-	from func[6] = { Scalar::fromChar , Scalar::fromInt , Scalar::fromFloat ,
-						Scalar::fromDouble, Scalar::fromPseudo, Scalar::fromBadinput };
+
+	// void	(Scalar::*converter[6])(std::stringstream const &ss); Thijs says this is garbage
+	func_array converter[6] = { &Scalar::fromChar , &Scalar::fromInt , &Scalar::fromFloat ,
+						&Scalar::fromDouble, &Scalar::fromPseudo, &Scalar::fromBadinput };
 	
 	std::stringstream	ss;
 	ss << _input;
-	func[type](ss);
+	(this->*converter[type])(ss);
 }
 
 void	Scalar::parse() {
