@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/26 09:58:28 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/29 14:55:31 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/29 15:14:52 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,15 @@ typedef void (Scalar::*func_array)(std::stringstream const &ss);
 
 void	Scalar::fromChar(std::stringstream const &ss) {
 	
-	std::cout << "test1" << ss.str() << std::endl; 
+	char	charliteral;
+	charliteral = ss.str()[0];
+	if (isprint(charliteral))
+		std::cout << "char: " << charliteral << std::endl;
+	else
+		std::cout << "char: Non displayable" << std::endl;
+	std::cout << "int: " << static_cast<int>(charliteral) << std::endl;
+	std::cout << "float: " << static_cast<float>(charliteral) << std::endl;
+	std::cout << "double: " << static_cast<double>(charliteral) << std::endl;
 }
 
 void	Scalar::fromInt(std::stringstream const &ss) {
@@ -89,12 +97,14 @@ void	Scalar::parse() {
 								"nanf"
 	};
 	
-	if (len == 1 && isalpha(_input[0])) {
+	if (len == 1 && isascii(_input[0])) {
 		convert(chartype);
+		return;
 	}
 	for (int i = 0; i < 6; i++) {
 		if (_input.compare(pseudos[i]) == 0) {
 			convert(pseudotype);
+			return;
 		}
 	}
 	if (!isdigit(_input[0])) {
