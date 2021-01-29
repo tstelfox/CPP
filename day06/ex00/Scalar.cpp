@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/26 09:58:28 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/29 12:48:17 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/29 12:57:32 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,40 +38,40 @@ Scalar::~Scalar() {}
 typedef void (*from)(std::stringstream const &ss);
 
 
-void	fromChar(std::stringstream const &ss) {
+void	Scalar::fromChar(std::stringstream const &ss) {
 	
 	std::cout << "test1" << ss.str() << std::endl; 
 }
 
-void	fromInt(std::stringstream const &ss) {
+void	Scalar::fromInt(std::stringstream const &ss) {
 	
 	std::cout << "test2" << ss.str() << std::endl; 
 }
 
-void	fromFloat(std::stringstream const &ss) {
+void	Scalar::fromFloat(std::stringstream const &ss) {
 	
 	std::cout << "test3" << ss.str() << std::endl; 
 }
 
-void	fromDouble(std::stringstream const &ss) {
+void	Scalar::fromDouble(std::stringstream const &ss) {
 	
 	std::cout << "test4" << ss.str() << std::endl; 
 }
 
-void	fromPseudo(std::stringstream const &ss) {
+void	Scalar::fromPseudo(std::stringstream const &ss) {
 	
 	std::cout << "test5" << ss.str() << std::endl; 
 }
 
-void	fromBadinput(std::stringstream const &ss) {
+void	Scalar::fromBadinput(std::stringstream const &ss) {
 
 	std::cout << "test6" << ss.str() << std::endl;
 }
 
 void	Scalar::convert(int type) {
 	
-	from func[6] = { fromChar , fromInt , fromFloat ,
-						fromDouble, fromPseudo, fromBadinput };
+	from func[6] = { Scalar::fromChar , Scalar::fromInt , Scalar::fromFloat ,
+						Scalar::fromDouble, Scalar::fromPseudo, Scalar::fromBadinput };
 	
 	std::stringstream	ss;
 	ss << _input;
@@ -107,10 +107,10 @@ void	Scalar::parse() {
 			while (_input[i]) {
 				if (_input[i] == 'f') {
 					convert(floattype);
-					break;
+					return;
 				}
 				convert(doubletype);
-				break;
+				return;
 			}
 		}
 	}

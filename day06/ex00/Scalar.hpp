@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/23 17:07:03 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/29 12:42:43 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/01/29 12:57:02 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ class Scalar {
 		void	parse();
 		void	convert(int type);
 		//All the functions to print the various outputs
-		// void	fromChar(std::stringstream ss);
-		// void	fromInt(std::stringstream ss);
-		// void	fromFloat(std::stringstream ss);
-		// void	fromDouble(std::stringstream ss);
-		// void	fromPseudo(std::stringstream ss);
-		// void	frombadinput(std::stringstream ss);
+		void	fromChar(std::stringstream const &ss);
+		void	fromInt(std::stringstream const &ss);
+		void	fromFloat(std::stringstream const &ss);
+		void	fromDouble(std::stringstream const &ss);
+		void	fromPseudo(std::stringstream const &ss);
+		void	fromBadinput(std::stringstream const &ss);
 
 	private:
 		Scalar();
