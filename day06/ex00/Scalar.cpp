@@ -55,7 +55,7 @@ void	Scalar::fromInt(std::stringstream const &ss) {
 	
 	std::stringstream temp; 
 	temp << ss.str();
-	int		intliteral = 0;
+	int		intliteral;
 	temp >> intliteral;
 
 	std::cout << std::fixed << std::setprecision(1);
@@ -70,12 +70,33 @@ void	Scalar::fromInt(std::stringstream const &ss) {
 
 void	Scalar::fromFloat(std::stringstream const &ss) {
 	
-	std::cout << "test3" << ss.str() << std::endl; 
+	std::stringstream temp;
+	temp << ss.str();
+	float	floatliteral;
+	std::string motherfucker = temp.str();
+	motherfucker.pop_back();
+	temp.str("");
+	temp << motherfucker;
+	temp >> floatliteral;
+
+	int sticazzi = floatliteral % 1;
+	if (isprint(floatliteral))
+		std::cout << "char: " << static_cast<char>(floatliteral) << std::endl;
+	else
+		std::cout << "char: Non displayable" << std::endl;
+	// std::cout << "int: " << intliteral << std::endl;
+	// std::cout << "float: " << static_cast<float>(intliteral) << "f" << std::endl;
+	// std::cout << "double: " << static_cast<double>(intliteral) << std::endl;
+	// std::cout << "test3: " << floatliteral << std::endl; 
 }
 
 void	Scalar::fromDouble(std::stringstream const &ss) {
 	
-	std::cout << "test4" << ss.str() << std::endl; 
+	std::stringstream temp;
+	temp << ss.str();
+	double	doubleliteral;
+	temp >> doubleliteral;
+	std::cout << "test4 " << doubleliteral << std::endl; 
 }
 
 void	Scalar::fromPseudo(std::stringstream const &ss) {
@@ -85,7 +106,8 @@ void	Scalar::fromPseudo(std::stringstream const &ss) {
 
 void	Scalar::fromBadinput(std::stringstream const &ss) {
 
-	std::cout << "test6" << ss.str() << std::endl;
+	(void)ss;
+	std::cout << "Input cannot be processed."<< std::endl;
 }
 
 void	Scalar::convert(int type) {
@@ -131,9 +153,10 @@ void	Scalar::parse() {
 					convert(floattype);
 					return;
 				}
-				convert(doubletype);
-				return;
+				i++;
 			}
+			convert(doubletype);
+			return;
 		}
 	}
 	convert(inttype);
