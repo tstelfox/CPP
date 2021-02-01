@@ -48,11 +48,24 @@ void	Scalar::fromChar(std::stringstream const &ss) {
 	std::cout << "int: " << static_cast<int>(charliteral) << std::endl;
 	std::cout << "float: " << static_cast<float>(charliteral) << "f" << std::endl;
 	std::cout << "double: " << static_cast<double>(charliteral) << std::endl;
+	std::cout << "Dear god please not here --- why tho" << std::endl;
 }
 
 void	Scalar::fromInt(std::stringstream const &ss) {
 	
-	std::cout << "test2" << ss.str() << std::endl; 
+	std::stringstream temp; 
+	temp << ss.str();
+	int		intliteral = 0;
+	temp >> intliteral;
+
+	std::cout << std::fixed << std::setprecision(1);
+	if (isprint(intliteral))
+		std::cout << "char: " << static_cast<char>(intliteral) << std::endl;
+	else
+		std::cout << "char: Non displayable" << std::endl;
+	std::cout << "int: " << intliteral << std::endl;
+	std::cout << "float: " << static_cast<float>(intliteral) << "f" << std::endl;
+	std::cout << "double: " << static_cast<double>(intliteral) << std::endl;
 }
 
 void	Scalar::fromFloat(std::stringstream const &ss) {
@@ -81,8 +94,7 @@ void	Scalar::convert(int type) {
 	func_array converter[6] = { &Scalar::fromChar , &Scalar::fromInt , &Scalar::fromFloat ,
 						&Scalar::fromDouble, &Scalar::fromPseudo, &Scalar::fromBadinput };
 	
-	std::stringstream	ss;
-	ss << _input;
+	std::stringstream	ss(_input);
 	(this->*converter[type])(ss);
 }
 
@@ -98,7 +110,7 @@ void	Scalar::parse() {
 								"nanf"
 	};
 	
-	if (len == 1 && isascii(_input[0])) {
+	if (len == 1 && !isdigit(_input[0])) {
 		convert(chartype);
 		return;
 	}
