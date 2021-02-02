@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/26 09:58:28 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/01/29 15:52:22 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/02/02 13:32:21 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ void	Scalar::fromChar(std::stringstream const &ss) {
 	std::cout << "Dear god please not here --- why tho" << std::endl;
 }
 
+// All the digits will need to handle overflow FFS.
+
 void	Scalar::fromInt(std::stringstream const &ss) {
 	
 	std::stringstream temp; 
@@ -73,21 +75,19 @@ void	Scalar::fromFloat(std::stringstream const &ss) {
 	std::stringstream temp;
 	temp << ss.str();
 	float	floatliteral;
-	std::string motherfucker = temp.str();
-	motherfucker.pop_back();
+	std::string popstring = temp.str();
+	popstring.pop_back();
 	temp.str("");
-	temp << motherfucker;
+	temp << popstring;
 	temp >> floatliteral;
 
-	int sticazzi = floatliteral % 1;
 	if (isprint(floatliteral))
 		std::cout << "char: " << static_cast<char>(floatliteral) << std::endl;
 	else
 		std::cout << "char: Non displayable" << std::endl;
-	// std::cout << "int: " << intliteral << std::endl;
-	// std::cout << "float: " << static_cast<float>(intliteral) << "f" << std::endl;
-	// std::cout << "double: " << static_cast<double>(intliteral) << std::endl;
-	// std::cout << "test3: " << floatliteral << std::endl; 
+	std::cout << "int: " << static_cast<int>(floatliteral) << std::endl;
+	std::cout << "float: " << floatliteral << "f" << std::endl;
+	std::cout << "double: " << static_cast<double>(floatliteral) << std::endl;
 }
 
 void	Scalar::fromDouble(std::stringstream const &ss) {
@@ -142,7 +142,7 @@ void	Scalar::parse() {
 			return;
 		}
 	}
-	if (!isdigit(_input[0])) {
+	if (!isdigit(_input[0]) && _input[0] != '-') {
 		convert(badinput);
 		return;
 	}
