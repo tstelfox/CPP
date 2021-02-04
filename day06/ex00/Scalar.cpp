@@ -88,6 +88,7 @@ void	Scalar::fromFloat(std::stringstream const &ss) {
 	temp << popstring;
 	temp >> floatliteral;
 
+	std::cout << std::fixed << std::setprecision(1);
 	if (isprint(floatliteral))
 		std::cout << "char: " << static_cast<char>(floatliteral) << std::endl;
 	else
@@ -112,7 +113,24 @@ void	Scalar::fromDouble(std::stringstream const &ss) {
 	temp << ss.str();
 	double	doubleliteral;
 	temp >> doubleliteral;
-	std::cout << "test4 " << doubleliteral << std::endl; 
+
+	std::cout << std::fixed << std::setprecision(1);
+	if (isprint(doubleliteral))
+		std::cout << "char: " << static_cast<char>(doubleliteral) << std::endl;
+	else
+		std::cout << "char: Non displayable" << std::endl;
+	if (edgecases[inttype].empty())
+		std::cout << "int: " << static_cast<int>(doubleliteral) << std::endl;
+	else
+		std::cout << "int: " << edgecases[inttype] << std::endl;
+	if (edgecases[floattype].empty())
+		std::cout << "float: " << static_cast<float>(doubleliteral) << "f" << std::endl;
+	else
+		std::cout << "float: " << edgecases[floattype] << std::endl;
+	if (edgecases[doubletype].empty())
+		std::cout << "double: " << doubleliteral << std::endl;
+	else
+		std::cout << "double: " << edgecases[doubletype] << std::endl;
 }
 
 void	Scalar::fromPseudo(std::stringstream const &ss) {
@@ -137,7 +155,7 @@ void	Scalar::overflow(int type) {
 	ss << popstring;
 	ss >> temp;
 	// std::cout << ss.str() << std::endl;
-	std::cout << temp << std::endl;
+	// std::cout << temp << std::endl;
 	if (temp > INT_MAX || temp < INT_MIN) {
 		edgecases[inttype] = "impossible";
 		if (type == inttype) {
@@ -145,14 +163,14 @@ void	Scalar::overflow(int type) {
 			edgecases[doubletype] = "impossible";
 		}
 	}
-	if (temp > __FLT_MAX__ || temp < __FLT_MIN__)
+	if (temp > __FLT_MAX__ || temp < -(__FLT_MAX__))
 	{
 		edgecases[floattype] = "impossible";
 		if (type == floattype)
 			edgecases[doubletype] = "impossible";
 	}
-	if (temp > __DBL_MAX__ || temp < __DBL_MIN__) {
-		// std::cout << temp << " nah?" << std::endl;
+	if (temp > __DBL_MAX__ || temp < -(__DBL_MAX__)) {
+		std::cout << temp << " nah?" << std::endl;
 		edgecases[doubletype] = "impossible";
 	}
 }
