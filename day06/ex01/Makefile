@@ -5,14 +5,14 @@
 #                                                      +:+                     #
 #    By: tmullan <tmullan@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
-#    Created: 2021/01/26 10:49:04 by tmullan       #+#    #+#                  #
-#    Updated: 2021/01/26 10:49:04 by tmullan       ########   odam.nl          #
+#    Created: 2021/02/04 13:25:31 by tmullan       #+#    #+#                  #
+#    Updated: 2021/02/04 13:25:31 by tmullan       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = convert
+NAME = serialise
 CXX = clang++
-OBJ = main.o Scalar.o
+OBJ = main.o Serial.o
 FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
