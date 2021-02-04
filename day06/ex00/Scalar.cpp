@@ -135,7 +135,14 @@ void	Scalar::fromDouble(std::stringstream const &ss) {
 
 void	Scalar::fromPseudo(std::stringstream const &ss) {
 	
-	std::cout << "test5" << ss.str() << std::endl; 
+	(void)ss;
+	std::cout << "char: impossible" << std::endl;
+	std::cout << "int: impossible" << std::endl;
+	for (int i = 0; i < 6; i++) {
+
+	}
+	// Let's fucking go!
+	// std::cout << "test5" << ss.str() << std::endl;
 }
 
 void	Scalar::fromBadinput(std::stringstream const &ss) {
@@ -190,21 +197,14 @@ void	Scalar::convert(int type) {
 void	Scalar::parse() {
 
 	int len = _input.length();
-	std::string	pseudos[6] = {
-								"+inf",
-								"-inf",
-								"nan",
-								"+inff",
-								"-inff",
-								"nanf"
-	};
+	
 	
 	if (len == 1 && !isdigit(_input[0])) {
 		convert(chartype);
 		return;
 	}
 	for (int i = 0; i < 6; i++) {
-		if (_input.compare(pseudos[i]) == 0) {
+		if (_input.compare(_pseudos[i]) == 0) {
 			convert(pseudotype);
 			return;
 		}

@@ -53,6 +53,15 @@ class Scalar {
 			badinput
 		};
 
+		std::string	_pseudos[6] = {
+								"+inf",
+								"-inf",
+								"nan",
+								"+inff",
+								"-inff",
+								"nanf"
+		};
+
 };
 
 
