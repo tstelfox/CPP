@@ -13,11 +13,10 @@
 #include "Serial.hpp"
 
 int		main() {
-	{
-		Serial	test;
 
-		std::cout << "As you can see it decerealised sweetly:\n" << test._cheerios->s1 
-					<< "\n" << test._cheerios->n << "\n" << test._cheerios->s2 << std::endl;
-	}
+	Serial	test;
+
+	std::cout << "As you can see it decerealised sweetly:\n" << test._cheerios->s1 
+				<< "\n" << test._cheerios->n << "\n" << test._cheerios->s2 << std::endl;
 	return 0;
 }

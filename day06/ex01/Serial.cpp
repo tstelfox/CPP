@@ -16,8 +16,20 @@ Serial::Serial() {
 
 	void* raw = serialise();
 	_cheerios = deserialise(raw);
+}
 
-	// std::cout << _cheerios->s1 << std::endl;
+Serial::Serial(const Serial &original) {
+
+	*this = original;
+}
+
+Serial&		Serial::operator=(const Serial &rhs) {
+
+	if (this != &rhs) {
+
+		_cheerios = rhs._cheerios;
+	}
+	return *this;
 }
 
 Serial::~Serial() {

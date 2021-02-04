@@ -19,6 +19,8 @@ class Serial {
 
 	public:
 		Serial();
+		Serial(const Serial &original);
+		Serial& operator=(const Serial &rhs);
 		~Serial();
 
 		void*	serialise(void);
