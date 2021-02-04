@@ -51,8 +51,6 @@ void	Scalar::fromChar(std::stringstream const &ss) {
 	std::cout << "Dear god please not here --- why tho" << std::endl;
 }
 
-// All the digits will need to handle overflow FFS.
-
 void	Scalar::fromInt(std::stringstream const &ss) {
 	
 	std::stringstream temp; 
@@ -65,9 +63,18 @@ void	Scalar::fromInt(std::stringstream const &ss) {
 		std::cout << "char: " << static_cast<char>(intliteral) << std::endl;
 	else
 		std::cout << "char: Non displayable" << std::endl;
-	std::cout << "int: " << intliteral << std::endl;
-	std::cout << "float: " << static_cast<float>(intliteral) << "f" << std::endl;
-	std::cout << "double: " << static_cast<double>(intliteral) << std::endl;
+	if (edgecases[inttype].empty())
+		std::cout << "int: " << intliteral << std::endl;
+	else
+		std::cout << "int: " << edgecases[inttype] << std::endl;
+	if (edgecases[floattype].empty())
+		std::cout << "float: " << static_cast<float>(intliteral) << "f" << std::endl;
+	else
+		std::cout << "float: " << edgecases[floattype] << std::endl;
+	if (edgecases[doubletype].empty())
+		std::cout << "double: " << static_cast<double>(intliteral) << std::endl;
+	else
+		std::cout << "double: " << edgecases[doubletype] << std::endl;
 }
 
 void	Scalar::fromFloat(std::stringstream const &ss) {
@@ -85,9 +92,18 @@ void	Scalar::fromFloat(std::stringstream const &ss) {
 		std::cout << "char: " << static_cast<char>(floatliteral) << std::endl;
 	else
 		std::cout << "char: Non displayable" << std::endl;
-	std::cout << "int: " << static_cast<int>(floatliteral) << std::endl;
-	std::cout << "float: " << floatliteral << "f" << std::endl;
-	std::cout << "double: " << static_cast<double>(floatliteral) << std::endl;
+	if (edgecases[inttype].empty())
+		std::cout << "int: " << static_cast<int>(floatliteral) << std::endl;
+	else
+		std::cout << "int: " << edgecases[inttype] << std::endl;
+	if (edgecases[floattype].empty())
+		std::cout << "float: " << floatliteral << "f" << std::endl;
+	else
+		std::cout << "float: " << edgecases[floattype] << std::endl;
+	if (edgecases[doubletype].empty())
+		std::cout << "double: " << static_cast<double>(floatliteral) << std::endl;
+	else
+		std::cout << "double: " << edgecases[doubletype] << std::endl;
 }
 
 void	Scalar::fromDouble(std::stringstream const &ss) {
@@ -110,6 +126,37 @@ void	Scalar::fromBadinput(std::stringstream const &ss) {
 	std::cout << "Input cannot be processed."<< std::endl;
 }
 
+void	Scalar::overflow(int type) {
+
+	std::stringstream ss;
+	ss << _input;
+	long double	temp;
+	std::string popstring = ss.str();
+	popstring.pop_back();
+	ss.str("");
+	ss << popstring;
+	ss >> temp;
+	// std::cout << ss.str() << std::endl;
+	std::cout << temp << std::endl;
+	if (temp > INT_MAX || temp < INT_MIN) {
+		edgecases[inttype] = "impossible";
+		if (type == inttype) {
+			edgecases[floattype] = "impossible";
+			edgecases[doubletype] = "impossible";
+		}
+	}
+	if (temp > __FLT_MAX__ || temp < __FLT_MIN__)
+	{
+		edgecases[floattype] = "impossible";
+		if (type == floattype)
+			edgecases[doubletype] = "impossible";
+	}
+	if (temp > __DBL_MAX__ || temp < __DBL_MIN__) {
+		// std::cout << temp << " nah?" << std::endl;
+		edgecases[doubletype] = "impossible";
+	}
+}
+
 void	Scalar::convert(int type) {
 
 	// void	(Scalar::*converter[6])(std::stringstream const &ss); Thijs says this is garbage
@@ -117,6 +164,8 @@ void	Scalar::convert(int type) {
 						&Scalar::fromDouble, &Scalar::fromPseudo, &Scalar::fromBadinput };
 	
 	std::stringstream	ss(_input);
+	if (type > 0 && type < 4)
+		overflow(type);
 	(this->*converter[type])(ss);
 }
 

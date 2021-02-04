@@ -29,6 +29,7 @@ class Scalar {
 		// typedef void 	(*from)(std::stringstream ss);
 		void	parse();
 		void	convert(int type);
+		void	overflow(int type);
 		//All the functions to print the various outputs
 		void	fromChar(std::stringstream const &ss);
 		void	fromInt(std::stringstream const &ss);
@@ -40,6 +41,7 @@ class Scalar {
 	private:
 		Scalar();
 		std::string	_input;
+		std::string	edgecases[4];
 
 		enum Type {
 			
