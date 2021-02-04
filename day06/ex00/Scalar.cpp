@@ -133,13 +133,19 @@ void	Scalar::fromDouble(std::stringstream const &ss) {
 		std::cout << "double: " << edgecases[doubletype] << std::endl;
 }
 
-void	Scalar::fromPseudo(std::stringstream const &ss) {
+void	Scalar::pseudoProcess(int i) {
 	
-	(void)ss;
 	std::cout << "char: impossible" << std::endl;
 	std::cout << "int: impossible" << std::endl;
-	for (int i = 0; i < 6; i++) {
-
+	if (i < 3) {
+		std::cout << "float: " << _input << "f" << std::endl;
+		std::cout << "double: " << _input << std::endl;
+	}
+	else {
+		std::cout << "float: " << _input << std::endl;
+		std::string	notfloat;
+		_input.pop_back();
+		std::cout << "double: " << _input << std::endl;
 	}
 	// Let's fucking go!
 	// std::cout << "test5" << ss.str() << std::endl;
@@ -185,8 +191,8 @@ void	Scalar::overflow(int type) {
 void	Scalar::convert(int type) {
 
 	// void	(Scalar::*converter[6])(std::stringstream const &ss); Thijs says this is garbage
-	func_array converter[6] = { &Scalar::fromChar , &Scalar::fromInt , &Scalar::fromFloat ,
-						&Scalar::fromDouble, &Scalar::fromPseudo, &Scalar::fromBadinput };
+	func_array converter[5] = { &Scalar::fromChar , &Scalar::fromInt , &Scalar::fromFloat ,
+						&Scalar::fromDouble, &Scalar::fromBadinput };
 	
 	std::stringstream	ss(_input);
 	if (type > 0 && type < 4)
@@ -197,6 +203,15 @@ void	Scalar::convert(int type) {
 void	Scalar::parse() {
 
 	int len = _input.length();
+
+	std::string	pseudos[6] = {
+							"+inf",
+							"-inf",
+							"nan",
+							"+inff",
+							"-inff",
+							"nanf"
+	};
 	
 	
 	if (len == 1 && !isdigit(_input[0])) {
@@ -204,8 +219,8 @@ void	Scalar::parse() {
 		return;
 	}
 	for (int i = 0; i < 6; i++) {
-		if (_input.compare(_pseudos[i]) == 0) {
-			convert(pseudotype);
+		if (_input.compare(pseudos[i]) == 0) {
+			pseudoProcess(i);
 			return;
 		}
 	}

@@ -35,8 +35,8 @@ class Scalar {
 		void	fromInt(std::stringstream const &ss);
 		void	fromFloat(std::stringstream const &ss);
 		void	fromDouble(std::stringstream const &ss);
-		void	fromPseudo(std::stringstream const &ss);
 		void	fromBadinput(std::stringstream const &ss);
+		void	pseudoProcess(int i);
 
 	private:
 		Scalar();
@@ -49,17 +49,7 @@ class Scalar {
 			inttype,
 			floattype,
 			doubletype,
-			pseudotype,
 			badinput
-		};
-
-		std::string	_pseudos[6] = {
-								"+inf",
-								"-inf",
-								"nan",
-								"+inff",
-								"-inff",
-								"nanf"
 		};
 
 };
