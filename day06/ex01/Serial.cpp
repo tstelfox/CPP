@@ -45,18 +45,18 @@ void*	Serial::serialise() {
 
 	
 	for (int i = 0; i < 8; i++) {
-		data->s1 = alphanum[rand() % 64];
+		data->s1 += alphanum[rand() % 64];
 	}
 	data->n = rand();
 	for (int i = 0; i < 8; i++) {
-		data->s2 = alphanum[rand() % 64];
+		data->s2 += alphanum[rand() % 64];
 	}
 	
 	std::cout << data->s1 << std::endl;
 	std::cout << data->n << std::endl;
 	std::cout << data->s2 << std::endl;
 
-	std::cout << "Motherfucking size of, respectively s1, n and s2: " 
+	std::cout << "Size of, respectively s1, n and s2: " 
 			<< sizeof(data->s1) << " " << sizeof(data->n) << " " << sizeof(data->s2) << std::endl;
 
 	return reinterpret_cast<void*>(data);
