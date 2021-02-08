@@ -48,7 +48,6 @@ void	Scalar::fromChar(std::stringstream const &ss) {
 	std::cout << "int: " << static_cast<int>(charliteral) << std::endl;
 	std::cout << "float: " << static_cast<float>(charliteral) << "f" << std::endl;
 	std::cout << "double: " << static_cast<double>(charliteral) << std::endl;
-	std::cout << "Dear god please not here --- why tho" << std::endl;
 }
 
 void	Scalar::fromInt(std::stringstream const &ss) {
