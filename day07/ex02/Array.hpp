@@ -1,36 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   whatever.hpp                                       :+:    :+:            */
+/*   Array.hpp                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/02/09 11:55:46 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/02/09 11:55:46 by tmullan       ########   odam.nl         */
+/*   Created: 2021/02/09 13:04:45 by tmullan       #+#    #+#                 */
+/*   Updated: 2021/02/09 13:04:45 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-# define WHATEVER_HPP
+#ifndef ARRAY_HPP
+# define ARRAY_HPP
 # include <string>
 # include <iostream>
 
 template< typename T >
-void	swap(T &lhs, T &rhs) {
-	T	temp;
-	temp = rhs;
-	rhs = lhs;
-	lhs = temp;
-}
 
-template< typename T >
-T		min(T const &x, T const &y) {
-	return(x >= y ? y : x);
-}
+class array {
 
-template< typename T >
-T		max(T const &x, T const &y) {
-	return(x <= y ? y : x);
-}
+	public:
+		Array<T>() {
+			elements = new T*;
+			elements = NULL;
+		}
+
+		Array<T>(unsigned int n) {
+			elements = new T[n]();
+		}
+
+		Array<T>(Array const &original) {
+			*this = original;
+		}
+
+		Array&	operator=(Array const &rhs) {
+
+			if (this != &rhs) {
+				
+			}
+		}
+
+		~Array<T>() {
+			delete elements;
+		}
+
+		unsigned int	size();
+
+	private:
+		T*	elements;
+};
 
 #endif
