@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/09 11:55:46 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/02/09 11:55:46 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/07/29 18:51:30 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ void	swap(T &lhs, T &rhs) {
 }
 
 template< typename T >
-T		min(T const &x, T const &y) {
-	return(x >= y ? y : x);
+T		minimum(T const &x, T const &y) {
+	return((x >= y) ? y : x);
 }
 
 template< typename T >
-T		max(T const &x, T const &y) {
-	return(x <= y ? y : x);
+T		maximum(T const &x, T const &y) {
+	return((x <= y) ? y : x);
 }
 
 #endif
