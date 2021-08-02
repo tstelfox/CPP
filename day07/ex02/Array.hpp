@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/09 13:04:45 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/08/02 18:12:08 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/08/02 18:20:30 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class Array {
 		Array&	operator=(Array<T> const &rhs) {
 
 			if (this != &rhs) {
-				delete[] this->elements;
+				// delete[] this->elements;
 				this->_num = rhs._num;
 				this->elements = new T[rhs._num];
 				for (unsigned int i = 0; i < rhs.size(); i++)
@@ -49,7 +49,7 @@ class Array {
 
 		T&	operator[](unsigned int index) {
 			if (index < 0 || index >= _num)
-				throw(std::out_of_range("Not in range bruh"));
+				throw (std::out_of_range("Not in range bruh"));
 			return (elements[index]);
 		}
 
@@ -57,7 +57,7 @@ class Array {
 			delete []elements;
 		}
 
-		unsigned int	size() {
+		unsigned int	size() const {
 			return(this->_num);
 		};
 
