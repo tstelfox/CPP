@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/09 13:04:45 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/07/29 19:11:02 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/08/02 18:12:08 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,54 +15,55 @@
 # include <string>
 # include <iostream>
 
-template< typename T >
+template < typename T >
 
-class array {
+class Array {
 
 	public:
 		Array<T>() {
-			elements = new T*;
+			elements = new T;
+			_num = 0;
 			elements = NULL;
 		}
 
 		Array<T>(unsigned int n) {
-			elements = new T[n]();
+			elements = new T[n];
+			_num = n;
 		}
 
-		Array<T>(Array const &original) {
+		Array<T>(Array<T> const &original) {
 			*this = original;
 		}
 
-		Array&	operator=(Array const &rhs) {
+		Array&	operator=(Array<T> const &rhs) {
 
 			if (this != &rhs) {
-				new T = rhs.T;
+				delete[] this->elements;
+				this->_num = rhs._num;
+				this->elements = new T[rhs._num];
+				for (unsigned int i = 0; i < rhs.size(); i++)
+					this->elements[i] = rhs.elements[i];
 			}
 			return (*this);
 		}
 
-		elements	operator[](unsigned int index) {
-			try {
-
-			}
-			catch(std::exception &e) {
-				
-			}
+		T&	operator[](unsigned int index) {
+			if (index < 0 || index >= _num)
+				throw(std::out_of_range("Not in range bruh"));
+			return (elements[index]);
 		}
 
 		~Array<T>() {
-			delete elements[];
+			delete []elements;
 		}
 
 		unsigned int	size() {
-			unsigned int i = 0;
-			while (elements[i])
-				i++;
-			return (i);
+			return(this->_num);
 		};
 
 	private:
-		T*	elements;
+		unsigned int	_num;
+		T*				elements;
 };
 
 #endif

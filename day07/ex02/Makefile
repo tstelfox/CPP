@@ -6,11 +6,11 @@
 #    By: tmullan <tmullan@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/02/09 11:52:37 by tmullan       #+#    #+#                  #
-#    Updated: 2021/02/09 11:52:37 by tmullan       ########   odam.nl          #
+#    Updated: 2021/08/02 14:01:35 by tmullan       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = chissenefrega
+NAME = porcoddio
 CXX = clang++
 OBJ = main.o
 FLAGS = -Wall -Wextra -Werror
