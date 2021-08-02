@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/09 14:35:00 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/08/02 18:37:13 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/08/02 18:46:02 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int		main() {
 	Array<float> canedi(dioporco);
 	std::cout << canedi[1] << std::endl;
 	std::cout << dioporco[1] << std::endl;
-	std::cout << dioporco[4] << std::endl;
+
 	system("leaks porcoddio");
 	return 0;
 }
