@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/09 13:04:45 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/08/04 13:06:23 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/08/23 15:33:13 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Array {
 	public:
 		Array<T>() {
 			elements = new T;
+			elements = NULL;
 			_num = 0;
 		}
 
@@ -46,7 +47,7 @@ class Array {
 		}
 
 		T&	operator[](unsigned int index) {
-			if (index < 0 || index > _num)
+			if (index < 0 || index >= _num)
 				throw (std::out_of_range("Not in range bruh"));
 			return (elements[index]);
 		}

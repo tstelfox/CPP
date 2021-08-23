@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/09 14:35:00 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/08/04 13:23:40 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/08/23 15:35:14 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ int		main() {
 	
 	std::cout << "Now attempting to access an out of scope variable" << std::endl;
 	try {
-		str_arr[6] = "Not gonna happen";
+		str_arr[5] = "Not gonna happen";
 	}
-	catch(const std::exception &e)
+	catch(const std::out_of_range &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
@@ -42,7 +42,13 @@ int		main() {
 	std::cout << std::endl << "Now an empty int array" << std::endl;	
 
 	for (unsigned int i = 0; i <= empty_int.size(); i++)
+	try {
 		std::cout << "This array is empty: " << empty_int[i] << std::endl;
+	}
+	catch(const std::out_of_range &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 
 	std::cout << std::endl << "And now for some floats" << std::endl;
 
