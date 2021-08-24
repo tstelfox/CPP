@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/09 14:35:00 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/08/23 15:41:19 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/08/24 15:10:13 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int		main() {
 	return 0;
 }
 
-// #define MAX_VAL 750
+// #define MAX_VAL 75
 // int main(int, char**)
 // {
 //     Array<int> numbers(MAX_VAL);
