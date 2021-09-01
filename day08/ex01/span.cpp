@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/01 13:45:02 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/09/01 13:58:45 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/01 16:30:31 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,6 @@ Span&	Span::operator = (const Span &rhs) {
 	return (*this);
 }
 
+void	Span::addNumber(const int num) {
+	_container->push_back(num);
+}
