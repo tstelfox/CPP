@@ -6,27 +6,29 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/25 12:22:49 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/08/25 13:00:48 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/01 13:49:40 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SPAN_HPP
 # define SPAN_HPP
+# include <algorithm>
+# include <vector>
 
 class Span {
 	
 	private:
-			std::vector	_container;
-
+			std::vector<int>	*_container;
+			Span();
 	public:
 			Span(unsigned int N);
 			Span(const Span &original);
 			Span&	operator = (const Span &rhs);
 			~Span();
 
-			addNumber(const int num);
-			shortestSpan();
-			longestSpan();
+			void	addNumber(const int num);
+			int		shortestSpan();
+			int		longestSpan();
 };
 
 
