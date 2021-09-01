@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/01 13:45:02 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/09/01 16:30:31 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/01 17:36:06 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,12 @@ Span&	Span::operator = (const Span &rhs) {
 
 void	Span::addNumber(const int num) {
 	_container->push_back(num);
+}
+
+int		Span::longestSpan() {
+	// DO the ting
+}
+
+int		Span::shortestSpan() {
+	
 }
