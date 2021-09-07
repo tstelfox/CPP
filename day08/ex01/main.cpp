@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/07 12:20:01 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/09/07 20:49:32 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/07 21:17:20 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		main() {
 
 	int	nums[5] = {69, 4, 32, -7, 999};
-	std::vector<int>	temp(5);
+	std::vector<int>	temp;
 	Span	test(1001);
 	Span	ranged(5);
 	srand(time(NULL));
@@ -23,7 +23,6 @@ int		main() {
 	for (int i = 0; i < 5; i++)
 	{
 		temp.push_back(nums[i]);
-		std::cout << temp[i] << std::endl;
 	}
 	ranged.addRange(temp.begin(), temp.end());
 	for (int i = 0; i < 1001; i++)	{
