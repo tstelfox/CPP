@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/07 12:20:01 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/09/07 21:17:20 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/07 21:19:49 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ int		main() {
 	srand(time(NULL));
 
 	for (int i = 0; i < 5; i++)
-	{
 		temp.push_back(nums[i]);
-	}
+
 	ranged.addRange(temp.begin(), temp.end());
-	for (int i = 0; i < 1001; i++)	{
+
+	for (int i = 0; i < 1001; i++)
 		test.addNumber(rand());
-	}
+
 	try {
 		std::cout << "Longest span here is: " << test.longestSpan() << std::endl;
 	}
