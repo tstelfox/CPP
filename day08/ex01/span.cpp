@@ -6,22 +6,23 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/01 13:45:02 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/09/01 17:36:06 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/07 12:19:45 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "span.hpp"
 
-Span::Span(unsigned int N) {
-	_container = new std::vector<int>(N);
-}
+Span::Span(unsigned int N) : _size(N) {}
 
 Span::Span(const Span &original) {
 	*this = original;
 }
 
-Span::~Span() {
-	delete[] _container;
+Span::~Span() {}
+
+const char* Span::VectorFullException::what() const throw() {
+
+	return "Container is already full";
 }
 
 Span&	Span::operator = (const Span &rhs) {
@@ -31,13 +32,25 @@ Span&	Span::operator = (const Span &rhs) {
 }
 
 void	Span::addNumber(const int num) {
-	_container->push_back(num);
+	try {
+		if (_container.size() < _size)
+			_container.push_back(num);
+		else
+			throw (full);
+	}
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
 }
 
 int		Span::longestSpan() {
-	// DO the ting
+	int	lspan;
+
+	lspan = *max_element(_container.begin(), _container.end()) - *min_element(_container.begin(), _container.end());
+	
+	return lspan;
 }
 
-int		Span::shortestSpan() {
+// int		Span::shortestSpan() {
 	
-}
+// }
