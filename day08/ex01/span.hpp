@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/25 12:22:49 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/09/07 12:19:42 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/07 15:10:23 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,18 @@ class Span {
 			~Span();
 
 			void	addNumber(const int num);
-			// int		shortestSpan();
+			int		shortestSpan();
 			int		longestSpan();
 
 			class	VectorFullException : public std::exception {
 			public:
 				virtual const char* what() const throw();
 			} full;
+
+			class	VectorNoSpanException : public std::exception {
+			public:
+				virtual const char* what() const throw();
+			} nospan;
 };
 
 
