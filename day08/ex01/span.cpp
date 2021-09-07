@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/01 13:45:02 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/09/07 15:19:51 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/07 20:36:38 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,24 @@ Span&	Span::operator = (const Span &rhs) {
 
 void	Span::addNumber(const int num) {
 	try {
-		if (_container.size() < _size)
-			_container.push_back(num);
-		else
+		if (_container.size() >= _size)
 			throw (full);
+		_container.push_back(num);
+	}
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+}
+
+void	Span::addRange(std::vector<int>::iterator from, std::vector<int>::iterator to) {
+
+	try {
+		// std::cout << std::distance(from, to) << std::endl;
+		if (std::distance(from, to) + this->_container.size() > this->_size)
+			throw (full);
+		_container.insert(_container.end(), from, to);
+		for (int i = 0; _container[i]; i++)
+			std::cout << _container[i] << std::endl;
 	}
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
@@ -54,8 +68,10 @@ void	Span::addNumber(const int num) {
 int		Span::longestSpan() {
 
 	if (_container.size() > 1)
+	{
 		return (*max_element(_container.begin(), _container.end()) 
 			- *min_element(_container.begin(), _container.end()));
+	}
 	else
 		throw nospan;
 }

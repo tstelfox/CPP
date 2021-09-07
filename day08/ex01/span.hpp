@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/25 12:22:49 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/09/07 15:10:23 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/07 18:24:36 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <algorithm>
 # include <vector>
 # include <iostream>
+# include <time.h>
 
 class Span {
 	
@@ -29,6 +30,7 @@ class Span {
 			~Span();
 
 			void	addNumber(const int num);
+			void	addRange(std::vector<int>::iterator from, std::vector<int>::iterator to);
 			int		shortestSpan();
 			int		longestSpan();
 

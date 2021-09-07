@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/07 12:20:01 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/09/07 15:23:44 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/07 20:49:32 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,20 @@
 int		main() {
 
 	int	nums[5] = {69, 4, 32, -7, 999};
-	Span	test(5);
-	Span	fail(2);
+	std::vector<int>	temp(5);
+	Span	test(1001);
+	Span	ranged(5);
+	srand(time(NULL));
 
-	for (int i = 0; i < 6; i++)	{
-		test.addNumber(nums[i]);
+	for (int i = 0; i < 5; i++)
+	{
+		temp.push_back(nums[i]);
+		std::cout << temp[i] << std::endl;
 	}
-	fail.addNumber(4);
-	fail.addNumber(4);
+	ranged.addRange(temp.begin(), temp.end());
+	for (int i = 0; i < 1001; i++)	{
+		test.addNumber(rand());
+	}
 	try {
 		std::cout << "Longest span here is: " << test.longestSpan() << std::endl;
 	}
@@ -36,7 +42,7 @@ int		main() {
 		std::cout << e.what() << std::endl;
 	}
 	try {
-		std::cout << "Longest span here is: " << fail.longestSpan() << std::endl;
+		std::cout << "Longest span in the ranged is: " << ranged.longestSpan() << std::endl;
 	}
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
