@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/07 12:20:01 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/09/08 18:16:41 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/08 18:17:18 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,12 @@ int		main() {
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
-	// try {
-	// 	std::cout << "Shortest span here is: " << test.shortestSpan() << std::endl;
-	// }
-	// catch (std::exception &e) {
-	// 	std::cout << e.what() << std::endl;
-	// }
+	try {
+		std::cout << "Shortest span here is: " << test.shortestSpan() << std::endl;
+	}
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
 	try {
 		std::cout << "Longest span in the ranged is: " << ranged.longestSpan() << std::endl;
 	}
