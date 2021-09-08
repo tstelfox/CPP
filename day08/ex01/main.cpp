@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/07 12:20:01 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/09/07 21:19:49 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/08 18:16:41 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		main() {
 
-	int	nums[5] = {69, 4, 32, -7, 999};
+	int	nums[5] = {69, 4, 32, -16, 999};
 	std::vector<int>	temp;
 	Span	test(1001);
 	Span	ranged(5);
@@ -34,14 +34,20 @@ int		main() {
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
+	// try {
+	// 	std::cout << "Shortest span here is: " << test.shortestSpan() << std::endl;
+	// }
+	// catch (std::exception &e) {
+	// 	std::cout << e.what() << std::endl;
+	// }
 	try {
-		std::cout << "Shortest span here is: " << test.shortestSpan() << std::endl;
+		std::cout << "Longest span in the ranged is: " << ranged.longestSpan() << std::endl;
 	}
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
 	try {
-		std::cout << "Longest span in the ranged is: " << ranged.longestSpan() << std::endl;
+		std::cout << "Shortest span in the ranged is: " << ranged.shortestSpan() << std::endl;
 	}
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl;

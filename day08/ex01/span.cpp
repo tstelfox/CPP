@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/01 13:45:02 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/09/07 21:16:24 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/08 18:16:16 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,14 +78,14 @@ int		Span::shortestSpan() {
 
 	if (_container.size() > 1)
 	{
-		for (int i = 0; _container[i - 1]; i++)
-		{
-			for (int k = i + 1; _container[k]; k++)
-			{
-				if (abs(_container[i] - _container[k]) < shortest)
-					shortest = abs(_container[i] - _container[k]);
-			}
-		}
+		std::vector<int>	diff(_container.size());
+		std::sort(_container.begin(), _container.end());
+		std::adjacent_difference(_container.begin(), _container.end(), diff.begin());
+		diff.erase(diff.begin());
+		// std::cout << "Size is " << diff.size() << std::endl;
+		// for (size_t i = 0; i < diff.size(); i++)
+		// 	std::cout << "testing " << diff[i] << std::endl;
+		shortest = *min_element(diff.begin(), diff.end());
 	}
 	else
 		throw nospan;

@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/25 12:22:49 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/09/07 18:24:36 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/08 17:36:05 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <vector>
 # include <iostream>
 # include <time.h>
+# include <numeric>
 
 class Span {
 	
