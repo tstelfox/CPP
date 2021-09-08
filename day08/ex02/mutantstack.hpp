@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/08 12:39:32 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/09/08 12:56:48 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/08 18:52:50 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,19 @@
 # include <stack>
 # include <algorithm>
 
-class MutantStack {
+template < typename T >
+class MutantStack : public std::stack<T> {
+
 	private:
-		/* data */
+		
 	public:
-		MutantStack(/* args */);
-		~MutantStack();
+		MutantStack<T>() {
+			
+		}
+		~MutantStack<T>();
+
+		Container::value_type&	fckiterate()
 };
-
-MutantStack::MutantStack(/* args */)
-{
-}
-
-MutantStack::~MutantStack()
-{
-}
 
 
 #endif
