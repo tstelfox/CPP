@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/07 12:20:01 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/09/08 18:17:18 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/09 12:57:44 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ int		main() {
 	Span	ranged(5);
 	srand(time(NULL));
 
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 5; ++i)
 		temp.push_back(nums[i]);
 
 	ranged.addRange(temp.begin(), temp.end());
 
-	for (int i = 0; i < 1001; i++)
+	for (int i = 0; i < 1001; ++i)
 		test.addNumber(rand());
 
 	try {

@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/08 12:39:13 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/09/09 12:44:34 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/09 13:02:05 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ int		main() {
 
 
 
-	// MutantStack<std::string>	copyo(stacko);
-	// std::cout << copyo.top() << std::endl;
+	MutantStack<std::string>	copyo(stacko);
+	std::cout << copyo.top() << std::endl;
 }
