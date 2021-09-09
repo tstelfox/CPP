@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/07 12:20:01 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/09/09 12:57:44 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/09 17:20:17 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 int		main() {
 
-	int	nums[5] = {69, 4, 32, -16, 999};
+	int	nums[5] = {69, 4, 17, -16, 999};
 	std::vector<int>	temp;
 	Span	test(1001);
 	Span	ranged(5);
+	Span	fail(1);
+	
 	srand(time(NULL));
 
 	for (int i = 0; i < 5; ++i)
@@ -27,27 +29,35 @@ int		main() {
 
 	for (int i = 0; i < 1001; ++i)
 		test.addNumber(rand());
-
+	fail.addNumber(1);
+	std::cout << "Attempting to fill a Span of 1 with a second element: ";
+	fail.addNumber(2);
 	try {
-		std::cout << "Longest span here is: " << test.longestSpan() << std::endl;
+		std::cout << "Longest span in the 1000+ container is: " << test.longestSpan() << std::endl;
 	}
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
 	try {
-		std::cout << "Shortest span here is: " << test.shortestSpan() << std::endl;
+		std::cout << "Shortest span in the 1000+ container is: " << test.shortestSpan() << std::endl;
 	}
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
 	try {
-		std::cout << "Longest span in the ranged is: " << ranged.longestSpan() << std::endl;
+		std::cout << "Longest span in the normal sized one is: " << ranged.longestSpan() << std::endl;
 	}
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
 	try {
-		std::cout << "Shortest span in the ranged is: " << ranged.shortestSpan() << std::endl;
+		std::cout << "Shortest span in the normal sized one is: " << ranged.shortestSpan() << std::endl;
+	}
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+	try {
+		std::cout << "Span with 1 element: " << fail.shortestSpan() << std::endl;
 	}
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
