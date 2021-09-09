@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/08 12:39:13 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/09/09 16:51:50 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/09 17:06:57 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ int		main() {
 	MutantStack<int>::iterator	it = stacko.begin();
 	MutantStack<int>::iterator	ite = stacko.end();
 
+	std::cout << "Imma iterate up this stack" << std::endl;
 	while (it != ite)
 	{
 		std::cout << *it << std::endl;
@@ -63,7 +64,7 @@ int		main() {
 	}
 	// std::cout << stacko.top() << std::endl;
 
-	std::cout << "Now just gonna pop pop pop" << std::endl;
+	std::cout << "Now just gonna pop pop pop (three times)" << std::endl;
 	stacko.pop();
 	stacko.pop();
 	stacko.pop();
@@ -73,5 +74,5 @@ int		main() {
 	MutantStack<int>	copyo(stacko);
 	std::cout << "The copied one has this at the top: " << copyo.top() << std::endl;
 
-
+	return 0;
 }

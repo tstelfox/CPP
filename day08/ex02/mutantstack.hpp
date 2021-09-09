@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/08 12:39:32 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/09/09 16:48:25 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/09 17:07:10 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stack>
 # include <algorithm>
 # include <string>
+# include <list>
 # include <iostream>
 
 template < class T , class Container = std::deque <T> >
