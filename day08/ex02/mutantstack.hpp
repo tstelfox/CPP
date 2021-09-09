@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/08 12:39:32 by tmullan       #+#    #+#                 */
-/*   Updated: 2021/09/08 18:52:50 by tmullan       ########   odam.nl         */
+/*   Updated: 2021/09/09 11:47:41 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 # include <stack>
 # include <algorithm>
 
-template < typename T >
-class MutantStack : public std::stack<T> {
+template < class T , class Container = std::deque <T> >
+class MutantStack : public std::stack< T , Container > {
 
 	private:
 		
@@ -24,7 +24,9 @@ class MutantStack : public std::stack<T> {
 		MutantStack<T>() {
 			
 		}
-		~MutantStack<T>();
+		~MutantStack<T>() {
+			
+		}
 
 		Container::value_type&	fckiterate()
 };
